@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="scene" size="8.580000 9.630000" />
+    <ImageTarget name="money" size="8.580000 9.630000" />
+    <ImageTarget name="heart" size="8.580000 9.630000" />
+    <ImageTarget name="hat" size="8.580000 9.630000" />
+    <ImageTarget name="gift" size="8.580000 9.630000" />
+    <ImageTarget name="cat" size="8.580000 9.630000" />
+    <ImageTarget name="balloons" size="8.580000 9.630000" />
+    <ImageTarget name="cake" size="8.580000 9.630000" />
+    <ImageTarget name="roses" size="8.580000 9.630000" />
+    <ImageTarget name="bear" size="8.580000 9.630000" />
+  </Tracking>
+</QCARConfig>

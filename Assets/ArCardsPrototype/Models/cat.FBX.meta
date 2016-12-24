@@ -1,0 +1,181 @@
+fileFormatVersion: 2
+guid: fb57e6e9620547a479352fa1e6783a75
+timeCreated: 1482569209
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base Human001
+    100002: Base Human001Head
+    100004: Base Human001LCalf
+    100006: Base Human001LCollarbone
+    100008: Base Human001LFoot
+    100010: Base Human001LPalm
+    100012: Base Human001LPlatform
+    100014: Base Human001LThigh
+    100016: Base Human001LUpperarm
+    100018: Base Human001Neck
+    100020: Base Human001Pelvis
+    100022: Base Human001RCalf
+    100024: Base Human001RCollarbone
+    100026: Base Human001RFoot
+    100028: Base Human001Ribcage
+    100030: Base Human001RPalm
+    100032: Base Human001RPlatform
+    100034: Base Human001RThigh
+    100036: Base Human001RUpperarm
+    100038: Base Human001Spine1
+    100040: Base Human001Spine2
+    100042: Base Human001Tail1
+    100044: Base Human001Tail2
+    100046: Base Human001Tail3
+    100048: Base Human001Tail4
+    100050: Base Human001Tail5
+    100052: Base Human001Tail6
+    100054: Base Human001Tail7
+    100056: Bone001
+    100058: Bone002
+    100060: Bone003
+    100062: Bone004
+    100064: //RootNode
+    100066: Cat_017
+    100068: Circle010
+    100070: Circle011
+    100072: Group035
+    100074: Group036
+    100076: LAT_body_BFSPLC_Eye_L
+    100078: LAT_body_BFSPLC_Eye_R
+    100080: LAT_body_BFSPLC_EyesParent
+    100082: Object
+    100084: Sphere055
+    100086: Sphere056
+    100088: Sphere059
+    100090: Sphere060
+    400000: Base Human001
+    400002: Base Human001Head
+    400004: Base Human001LCalf
+    400006: Base Human001LCollarbone
+    400008: Base Human001LFoot
+    400010: Base Human001LPalm
+    400012: Base Human001LPlatform
+    400014: Base Human001LThigh
+    400016: Base Human001LUpperarm
+    400018: Base Human001Neck
+    400020: Base Human001Pelvis
+    400022: Base Human001RCalf
+    400024: Base Human001RCollarbone
+    400026: Base Human001RFoot
+    400028: Base Human001Ribcage
+    400030: Base Human001RPalm
+    400032: Base Human001RPlatform
+    400034: Base Human001RThigh
+    400036: Base Human001RUpperarm
+    400038: Base Human001Spine1
+    400040: Base Human001Spine2
+    400042: Base Human001Tail1
+    400044: Base Human001Tail2
+    400046: Base Human001Tail3
+    400048: Base Human001Tail4
+    400050: Base Human001Tail5
+    400052: Base Human001Tail6
+    400054: Base Human001Tail7
+    400056: Bone001
+    400058: Bone002
+    400060: Bone003
+    400062: Bone004
+    400064: //RootNode
+    400066: Cat_017
+    400068: Circle010
+    400070: Circle011
+    400072: Group035
+    400074: Group036
+    400076: LAT_body_BFSPLC_Eye_L
+    400078: LAT_body_BFSPLC_Eye_R
+    400080: LAT_body_BFSPLC_EyesParent
+    400082: Object
+    400084: Sphere055
+    400086: Sphere056
+    400088: Sphere059
+    400090: Sphere060
+    2300000: Object
+    2300002: Sphere055
+    2300004: Sphere056
+    2300006: Sphere059
+    2300008: Sphere060
+    3300000: Object
+    3300002: Sphere055
+    3300004: Sphere056
+    3300006: Sphere059
+    3300008: Sphere060
+    4300000: Sphere055
+    4300002: Sphere056
+    4300004: Object
+    4300006: Sphere059
+    4300008: Sphere060
+    4300010: Cat_017
+    9500000: //RootNode
+    13700000: Cat_017
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

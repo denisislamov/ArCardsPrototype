@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ImageTargetManager : MonoBehaviour
 {
-    [SerializeField] protected TrackableEventHandler[] TrackableEventHandlers;
+    [SerializeField] protected CustomTrackableEventHandler[] TrackableEventHandlers;
     [SerializeField] protected UiTransformController UiTransformController;
 
     protected void OnEnable()

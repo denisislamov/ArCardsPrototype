@@ -381,5 +381,12 @@ the Access Fine Location or Acces Coarse Location on Android Manifest without do
 Wifi Strength. for more info follow this link
 http://www.gigadrillgames.com/2016/10/15/aup-internet-plugin-internet-to-get-wifi-strength-needs-new-permission-starting-from-marshmallow-android-6-0/ 
 
+version 1.6.8
+12/07/2016
 
- 
+1. added Media Scanner plugin this one will help you refresh the photo gallery to show your new photo using custom camera and screen shots
+
+version 1.6.9
+12/08/2016
+
+1. added SharedPref Plugin to save and load to android sharedpref

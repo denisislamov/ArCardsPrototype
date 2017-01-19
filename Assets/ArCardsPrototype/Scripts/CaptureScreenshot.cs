@@ -1,5 +1,7 @@
 ﻿using System;
 using UnityEngine;
+using System.IO;
+using System.Collections;
 
 public class CaptureScreenshot : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class CaptureScreenshot : MonoBehaviour
 
     private void Init()
     {
-        CaptureScreenshotButton.onClick.AddListener(delegate { ShareImage(); });
+        CaptureScreenshotButton.onClick.AddListener(delegate { StartCoroutine(TakeImage()); });
 
         _utilsPlugin = UtilsPlugin.GetInstance();
         _utilsPlugin.SetDebug(0);
@@ -27,18 +29,31 @@ public class CaptureScreenshot : MonoBehaviour
         _sharePlugin.SetDebug(0);
     }
 
-    public void ShareImage()
+    public IEnumerator TakeImage()
     {
-        string screenShotName = "ar_card_screehshot.jpg";
-        string folderPath = _utilsPlugin.CreateFolder("MyScreenShots", 0);
-        string path = "";
+        bool photoSaved = false;
 
-        if (!folderPath.Equals("", StringComparison.Ordinal))
+        Debug.Log("TakeImage Start");
+
+        string date = System.DateTime.Now.ToString("dd_MM_yy_H_mm_ss");
+        string screenshotFilename = "arCard" + "_" + date + ".png";
+
+        string androidPath = "/../../../../DCIM/" + "ArCards" + "/" + screenshotFilename;
+        string path = Application.persistentDataPath + androidPath;
+        string pathonly = Path.GetDirectoryName(path);
+
+        Directory.CreateDirectory(pathonly);
+        Application.CaptureScreenshot(androidPath);
+
+        AndroidJavaClass obj = new AndroidJavaClass("com.ryanwebb.androidscreenshot.MainActivity");
+
+        while (!photoSaved)
         {
-            path = folderPath + "/" + screenShotName;
+            photoSaved = obj.CallStatic<bool>("scanMedia", path);
 
-            StartCoroutine(AUP.Utils.TakeScreenshot(path, screenShotName));
-            _sharePlugin.ShareImage("subject", "subjectContent", path);
+            yield return new WaitForSeconds(.5f);
         }
+
+        Debug.Log("TakeImage Done");
     }
 }

@@ -16,7 +16,9 @@ This plugin will speeds up your work and saves a lot of time compare on creating
 * GPS - timestamp<br>
 * GPS - nmea<br>
 * Speech Recognizer added offline mode<br>
-* Speech Recognizer added Partial Results<br><br>
+* Speech Recognizer added Partial Results<br>
+* Media Scanner - for updating Gallery<br>
+* SharedPref - for saving and loading<br><br>
 
 1.  Local Notification<br>
 2.  Screen Shot and Share Image<br>

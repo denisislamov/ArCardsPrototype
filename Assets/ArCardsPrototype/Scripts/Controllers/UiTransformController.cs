@@ -8,98 +8,43 @@ public class UiTransformController : MonoBehaviour
     // Ui Ref
     [Space(10)]
     [Header("UI References")]
-
-    // Translation Buttons
-    [SerializeField] protected UnityEngine.UI.Button XPositivePositionAxisButton;
-    [SerializeField] protected UnityEngine.UI.Button XNegativePositionAxisButton;
-    [SerializeField] protected UnityEngine.UI.Button ZPositivePositionAxisButton;
-    [SerializeField] protected UnityEngine.UI.Button ZNegativePositionAxisButton;
-    [SerializeField] protected float TranslationValue = 0.1f;
     
     // Rotation Buttons
     [Space(5)]
-    [SerializeField] protected UnityEngine.UI.Button XPositiveRotationAxisButton;
-    [SerializeField] protected UnityEngine.UI.Button XNegativeRotationAxisButton;
-    [SerializeField] protected UnityEngine.UI.Button YPositiveRotationAxisButton;
-    [SerializeField] protected UnityEngine.UI.Button YNegativeRotationAxisButton;
-    [SerializeField] protected float RotationValue = 10.0f;
-
-    public UnityEngine.UI.Button GetXPositiveRotationAxisButton() { return XPositiveRotationAxisButton; }
-    public UnityEngine.UI.Button GetXNegativeRotationAxisButton() { return XNegativeRotationAxisButton; }
-    public UnityEngine.UI.Button GetYPositiveRotationAxisButton() { return YPositiveRotationAxisButton; }
-    public UnityEngine.UI.Button GetYNegativeRotationAxisButton() { return YNegativeRotationAxisButton; }
-    
-    public float GetRotationValue() { return RotationValue; }
+    [SerializeField] protected float RotationFactor = 20.0f;
 
     // Scale Slider
     [Space(5)]
-    [SerializeField] protected UnityEngine.UI.Slider ScaleSlider;
+    [SerializeField] protected UnityEngine.UI.Button ZoomIn;
+    [SerializeField] protected UnityEngine.UI.Button ZoomOut;
 
-    public UnityEngine.UI.Slider GetScaleSliderRef() {return ScaleSlider; }
+    [SerializeField] protected float MinScale = 0.32768f;
+    [SerializeField] protected float MaxScale = 3.0517578125f;
 
     private void Init()
     {
-        XPositivePositionAxisButton.onClick.AddListener(delegate { Move(AxisType.X, TranslationValue); });
-        XNegativePositionAxisButton.onClick.AddListener(delegate { Move(AxisType.X, -TranslationValue); });
-        ZPositivePositionAxisButton.onClick.AddListener(delegate { Move(AxisType.Z, TranslationValue); });
-        ZNegativePositionAxisButton.onClick.AddListener(delegate { Move(AxisType.Z, -TranslationValue); });
+        ZoomIn.onClick.AddListener(delegate { Scale(-0.1f); });
+        ZoomOut.onClick.AddListener(delegate { Scale(0.1f); });
 
-        XPositiveRotationAxisButton.onClick.AddListener(delegate { Rotate(AxisType.X, RotationValue); });
-        XNegativeRotationAxisButton.onClick.AddListener(delegate { Rotate(AxisType.X, -RotationValue); });
-        YPositiveRotationAxisButton.onClick.AddListener(delegate { Rotate(AxisType.Y, RotationValue); });
-        YNegativeRotationAxisButton.onClick.AddListener(delegate { Rotate(AxisType.Y, -RotationValue); });
-
-        ScaleSlider.onValueChanged.AddListener(delegate { Scale(ScaleSlider.value); });
     }
 
-    private void Awake()
+    protected void Awake()
     {
         Init();
     }
 
-    public enum AxisType
+    protected void Update()
     {
-        X = 0,
-        Y = 1,
-        Z = 2
+        Rotate();
     }
 
-    private void Move(AxisType axis, float value)
+    private void Rotate()
     {
         if (TargetTransform != null)
         {
-            switch (axis)
-            {
-                case AxisType.X:
-
-                    TargetTransform.Translate(value, 0.0f, 0.0f, Space.Self);
-                    break;
-                case AxisType.Y:
-                    TargetTransform.Translate(0.0f, value, 0.0f, Space.Self);
-                    break;
-                case AxisType.Z:
-                    TargetTransform.Translate(0.0f, 0.0f, value, Space.Self);
-                    break;
-            }
-        }
-    }
-
-    private void Rotate(AxisType axis, float value)
-    {
-        if (TargetTransform != null)
-        {
-            switch (axis)
-            {
-                case AxisType.X:
-                    TargetTransform.Rotate(value, 0.0f, 0.0f, Space.Self);
-                    break;
-                case AxisType.Y:
-                    TargetTransform.Rotate(0.0f, value, 0.0f, Space.Self);
-                    break;
-                case AxisType.Z:
-                    TargetTransform.Rotate(0.0f, 0.0f, value, Space.Self);
-                    break;
-            }
+            TargetTransform.Rotate(ETCInput.GetAxis("Vertical") * RotationFactor * Time.deltaTime, 
+                                   ETCInput.GetAxis("Horizontal") * RotationFactor * Time.deltaTime, 
+                                   0.0f, Space.Self);
         }
     }
 
@@ -107,12 +52,17 @@ public class UiTransformController : MonoBehaviour
     {
         if (TargetTransform != null)
         {
-            TargetTransform.localScale = new Vector3(value, value, value);
-        }
-    }
+            TargetTransform.localScale -= new Vector3(value, value, value);
+        
+            if (TargetTransform.localScale.x < MinScale)
+            {
+                TargetTransform.localScale = new Vector3(MinScale, MinScale, MinScale);
+            }
 
-    public void SetScaleSlider()
-    {
-        ScaleSlider.value = TargetTransform.localScale.x;
+            if (TargetTransform.localScale.x > MaxScale)
+            {
+                TargetTransform.localScale = new Vector3(MaxScale, MaxScale, MaxScale);
+            }
+        }
     }
 }

@@ -6,4 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ArCardsPrototype/Scenes/main.unity
+    path: Assets/ArCardsPrototype/Scenes/Preloaded_0.unity
+  - enabled: 1
+    path: Assets/ArCardsPrototype/Scenes/Main_1.unity
+  - enabled: 0
+    path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/Joystick-Event-Input.unity

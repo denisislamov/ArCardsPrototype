@@ -15,6 +15,8 @@ public class CustomCameraDemo : MonoBehaviour {
 	private string folderName="AUP_CCP";
 	private string imageFileName="AUP";
 	private string imagePath="";
+
+	private MediaScannerPlugin mediaScannerPlugin;
 	
 	public Button shareButton;
 	
@@ -28,6 +30,11 @@ public class CustomCameraDemo : MonoBehaviour {
 		customCameraPlugin.Init(folderName,imageFileName,true);
 		
 		customCameraPlugin.SetCameraCallbackListener(onCaptureImageComplete,onCaptureImageCancel,onCaptureImageFail);
+
+		mediaScannerPlugin = MediaScannerPlugin.GetInstance();
+		mediaScannerPlugin.SetDebug(0);
+		mediaScannerPlugin.Init();
+		mediaScannerPlugin.SetCallbackListener(onScanStarted,onScanComplete,onScanFail);
 		
 		EnableDisableShareButton(false);
 	}
@@ -84,6 +91,8 @@ public class CustomCameraDemo : MonoBehaviour {
 				if(imagePathCollection.Length > 0){
 					//get the top most image path
 					this.imagePath = imagePathCollection.GetValue(0).ToString();
+					Debug.Log("[CustomCameraDemo] onCaptureImageComplete imagePath " + imagePath);
+					mediaScannerPlugin.Scan(this.imagePath,"image/jpeg");
 				}
 
 				UpdateStatus("CaptureImageComplete");
@@ -107,6 +116,37 @@ public class CustomCameraDemo : MonoBehaviour {
 			()=>{
 				UpdateStatus("CaptureImageFail");
 				Debug.Log("[CustomCameraDemo] onCaptureImageFail");
+			}
+		);
+	}
+
+	public void onScanStarted(){
+		Dispatcher.GetInstance().InvokeAction(
+			()=>{
+				UpdateStatus("Media Scan Started");
+				Debug.Log("[CustomCameraDemo] onScanStarted media ");
+
+			}
+		);
+	}
+
+	public void onScanComplete(){
+		Dispatcher.GetInstance().InvokeAction(
+			()=>{
+				UpdateStatus("Media Scan complete");
+				Debug.Log("[CustomCameraDemo] onScanComplete media ");
+
+
+			}
+		);
+	}
+
+	public void onScanFail(){
+		Dispatcher.GetInstance().InvokeAction(
+			()=>{
+				UpdateStatus("Media Scan fail");
+				Debug.Log("[CustomCameraDemo] onScanFail media ");
+
 			}
 		);
 	}

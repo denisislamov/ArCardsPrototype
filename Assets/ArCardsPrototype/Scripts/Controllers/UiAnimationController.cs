@@ -3,27 +3,29 @@ using System.Collections;
 
 public class UiAnimationController : MonoBehaviour
 {
-    [SerializeField] protected Animator AnimatorRef;
-    [SerializeField] protected string BoolAnimationName = "Crouch";
+    public GameObject AnimatorsParent { get; set; }
+    [SerializeField] protected string BoolAnimationName = "Reset";
 
     // Ui Ref
     [Space(10)]
     [Header("UI References")]
-    [SerializeField] protected UnityEngine.UI.Button ChangeAnimationButton;
+    [SerializeField] protected UnityEngine.UI.Button ResetAnimationButton;
 
     private void Awake()
     {
-        Init();
+        ResetAnimationButton.onClick.AddListener(delegate { Reset(); });
     }
 
-    private void Init()
+    public void Reset()
     {
-        ChangeAnimationButton.onClick.AddListener(delegate { ChangeAnimationButtonOnClick(); });
-    }
+        if (AnimatorsParent != null)
+        {
+            var animators = AnimatorsParent.GetComponentsInChildren<Animator>();
 
-    private void ChangeAnimationButtonOnClick()
-    {
-        bool value = AnimatorRef.GetBool(BoolAnimationName);
-        AnimatorRef.SetBool(BoolAnimationName, !value);
+            foreach (var animator in animators)
+            {
+                animator.SetTrigger(BoolAnimationName);
+            }
+        }
     }
 }

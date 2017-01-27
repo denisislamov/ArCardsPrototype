@@ -3,7 +3,7 @@ using System.Collections;
 
 public class UiTransformController : MonoBehaviour
 {
-    [SerializeField] public Transform TargetTransform;
+    public Transform TargetTransform { get; set; }
 
     // Ui Ref
     [Space(10)]
@@ -18,32 +18,26 @@ public class UiTransformController : MonoBehaviour
     [SerializeField] protected UnityEngine.UI.Button ZoomIn;
     [SerializeField] protected UnityEngine.UI.Button ZoomOut;
 
-    [SerializeField] protected float MinScale = 0.32768f;
-    [SerializeField] protected float MaxScale = 3.0517578125f;
+    [SerializeField] protected float MinScale = 0.5f;
+    [SerializeField] protected float MaxScale = 2.0f;
 
-    private void Init()
-    {
-        ZoomIn.onClick.AddListener(delegate { Scale(-0.1f); });
-        ZoomOut.onClick.AddListener(delegate { Scale(0.1f); });
-
-    }
+    [Space(5)]
+    [SerializeField] protected UnityEngine.UI.Button ResetButtton;
 
     protected void Awake()
     {
-        Init();
+        ZoomIn.onClick.AddListener(delegate {  Scale(-0.1f); });
+        ZoomOut.onClick.AddListener(delegate { Scale( 0.1f); });
+
+        ResetButtton.onClick.AddListener(delegate { Reset(); });
     }
 
     protected void Update()
     {
-        Rotate();
-    }
-
-    private void Rotate()
-    {
         if (TargetTransform != null)
         {
-            TargetTransform.Rotate(ETCInput.GetAxis("Vertical") * RotationFactor * Time.deltaTime, 
-                                   ETCInput.GetAxis("Horizontal") * RotationFactor * Time.deltaTime, 
+            TargetTransform.Rotate(ETCInput.GetAxis("Vertical") * RotationFactor * Time.deltaTime,
+                                   ETCInput.GetAxis("Horizontal") * RotationFactor * Time.deltaTime,
                                    0.0f, Space.Self);
         }
     }
@@ -64,5 +58,11 @@ public class UiTransformController : MonoBehaviour
                 TargetTransform.localScale = new Vector3(MaxScale, MaxScale, MaxScale);
             }
         }
+    }
+
+    public void Reset()
+    {
+        TargetTransform.localScale = Vector3.one;
+        TargetTransform.localRotation = Quaternion.identity;
     }
 }

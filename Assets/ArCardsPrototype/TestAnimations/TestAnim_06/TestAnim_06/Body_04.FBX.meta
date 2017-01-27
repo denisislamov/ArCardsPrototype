@@ -89,7 +89,9 @@ ModelImporter:
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: Event Put of Animation Clip Take 001 has a time  (0.000000)
-      outside the clip's valid range (0.160000..36.200001). It will never be fired
+      outside the clip's valid range (0.160000..36.200001). It will never be firedEvent
+      Stop of Animation Clip Take 001 has a time  (0.000000) outside the clip's valid
+      range (0.160000..36.200001). It will never be fired
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 1
@@ -125,6 +127,13 @@ ModelImporter:
       events:
       - time: 0
         functionName: Put
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: Stop
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

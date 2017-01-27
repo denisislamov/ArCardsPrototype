@@ -4,7 +4,10 @@ using System.Collections;
 public class ImageTargetManager : MonoBehaviour
 {
     [SerializeField] protected CustomTrackableEventHandler[] TrackableEventHandlers;
-    [SerializeField] protected UiTransformController UiTransformController;
+
+    [Space(5)]
+    [SerializeField] protected UiTransformController UiTransformControllerRef;
+    [SerializeField] protected UiAnimationController UiAnimationControllerRef;
 
     protected void OnEnable()
     {
@@ -24,13 +27,21 @@ public class ImageTargetManager : MonoBehaviour
         }
     }
 
-    public void TrackingFound(Transform value)
+    public void TrackingFound(Transform transformRef, GameObject animatorsParent, bool isRequiredReset)
     {
-        UiTransformController.TargetTransform = value;
+        UiTransformControllerRef.TargetTransform = transformRef;
+        UiAnimationControllerRef.AnimatorsParent  = animatorsParent;
+
+        if (isRequiredReset)
+        {
+            UiTransformControllerRef.Reset();
+            UiAnimationControllerRef.Reset();
+        }
     }
 
     public void TrackingLost()
     {
-        UiTransformController.TargetTransform = null;
+        UiTransformControllerRef.TargetTransform = null;
+        UiAnimationControllerRef.AnimatorsParent = null;
     }
 }

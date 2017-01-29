@@ -1,0 +1,318 @@
+fileFormatVersion: 2
+guid: f691ed8e61e033d4e84b1a5365e0c0d9
+timeCreated: 1485557441
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 346
+    100002: 373
+    100004: Base Human001
+    100006: Base Human001Head
+    100008: Base Human001LCalf
+    100010: Base Human001LCollarbone
+    100012: Base Human001LFoot
+    100014: Base Human001LPalm
+    100016: Base Human001LPlatform
+    100018: Base Human001LThigh
+    100020: Base Human001LUpperarm
+    100022: Base Human001Neck
+    100024: Base Human001Pelvis
+    100026: Base Human001RCalf
+    100028: Base Human001RCollarbone
+    100030: Base Human001RFoot
+    100032: Base Human001Ribcage
+    100034: Base Human001RPalm
+    100036: Base Human001RPlatform
+    100038: Base Human001RThigh
+    100040: Base Human001RUpperarm
+    100042: Base Human001Spine1
+    100044: Base Human001Spine2
+    100046: Base Human001Tail1
+    100048: Base Human001Tail2
+    100050: Base Human001Tail3
+    100052: Base Human001Tail4
+    100054: Base Human001Tail5
+    100056: Base Human001Tail6
+    100058: Base Human001Tail7
+    100060: Bone001
+    100062: Bone002
+    100064: Bone003
+    100066: Bone004
+    100068: Box009
+    100070: Box010
+    100072: C_01
+    100074: C_01.Target
+    100076: cake
+    100078: //RootNode
+    100080: cake_MeshPart0
+    100082: cake_MeshPart1
+    100084: cake_MeshPart2
+    100086: cake_MeshPart3
+    100088: cake_MeshPart4
+    100090: cake_MeshPart5
+    100092: cake_MeshPart6
+    100094: cake_MeshPart7
+    100096: Cat_017
+    100098: Cat_024
+    100100: Cat_025
+    100102: Cat_026
+    100104: Cat_027
+    100106: default001
+    100108: Dummy001
+    100110: Group035
+    100112: Group036
+    100114: 'hart '
+    100116: Heart001
+    100118: Inst3D28_RefRep_218
+    100120: LAT_body_BFSPLC_Eye_L
+    100122: LAT_body_BFSPLC_Eye_R
+    100124: LAT_body_BFSPLC_EyesParent
+    100126: Line001
+    100128: Line002
+    100130: "magi\u0441 wand"
+    100132: Morgalka
+    100134: Object
+    100136: Particle View 01
+    100138: sliderManipulator002
+    100140: sliderManipulator003
+    100142: sliderManipulator004
+    100144: sliderManipulator005
+    100146: Sphere055
+    100148: Sphere056
+    100150: Sphere059
+    100152: Sphere060
+    100154: TooBig0
+    100156: V_004_FL
+    400000: 346
+    400002: 373
+    400004: Base Human001
+    400006: Base Human001Head
+    400008: Base Human001LCalf
+    400010: Base Human001LCollarbone
+    400012: Base Human001LFoot
+    400014: Base Human001LPalm
+    400016: Base Human001LPlatform
+    400018: Base Human001LThigh
+    400020: Base Human001LUpperarm
+    400022: Base Human001Neck
+    400024: Base Human001Pelvis
+    400026: Base Human001RCalf
+    400028: Base Human001RCollarbone
+    400030: Base Human001RFoot
+    400032: Base Human001Ribcage
+    400034: Base Human001RPalm
+    400036: Base Human001RPlatform
+    400038: Base Human001RThigh
+    400040: Base Human001RUpperarm
+    400042: Base Human001Spine1
+    400044: Base Human001Spine2
+    400046: Base Human001Tail1
+    400048: Base Human001Tail2
+    400050: Base Human001Tail3
+    400052: Base Human001Tail4
+    400054: Base Human001Tail5
+    400056: Base Human001Tail6
+    400058: Base Human001Tail7
+    400060: Bone001
+    400062: Bone002
+    400064: Bone003
+    400066: Bone004
+    400068: Box009
+    400070: Box010
+    400072: C_01
+    400074: C_01.Target
+    400076: cake
+    400078: //RootNode
+    400080: cake_MeshPart0
+    400082: cake_MeshPart1
+    400084: cake_MeshPart2
+    400086: cake_MeshPart3
+    400088: cake_MeshPart4
+    400090: cake_MeshPart5
+    400092: cake_MeshPart6
+    400094: cake_MeshPart7
+    400096: Cat_017
+    400098: Cat_024
+    400100: Cat_025
+    400102: Cat_026
+    400104: Cat_027
+    400106: default001
+    400108: Dummy001
+    400110: Group035
+    400112: Group036
+    400114: 'hart '
+    400116: Heart001
+    400118: Inst3D28_RefRep_218
+    400120: LAT_body_BFSPLC_Eye_L
+    400122: LAT_body_BFSPLC_Eye_R
+    400124: LAT_body_BFSPLC_EyesParent
+    400126: Line001
+    400128: Line002
+    400130: "magi\u0441 wand"
+    400132: Morgalka
+    400134: Object
+    400136: Particle View 01
+    400138: sliderManipulator002
+    400140: sliderManipulator003
+    400142: sliderManipulator004
+    400144: sliderManipulator005
+    400146: Sphere055
+    400148: Sphere056
+    400150: Sphere059
+    400152: Sphere060
+    400154: TooBig0
+    400156: V_004_FL
+    2300000: 346
+    2300002: 373
+    2300004: cake_MeshPart0
+    2300006: cake_MeshPart1
+    2300008: cake_MeshPart2
+    2300010: cake_MeshPart3
+    2300012: cake_MeshPart4
+    2300014: cake_MeshPart5
+    2300016: cake_MeshPart6
+    2300018: cake_MeshPart7
+    2300020: Cat_024
+    2300022: Cat_025
+    2300024: Cat_026
+    2300026: Cat_027
+    2300028: default001
+    2300030: Heart001
+    2300032: Inst3D28_RefRep_218
+    2300034: Line001
+    2300036: Line002
+    2300038: "magi\u0441 wand"
+    2300040: Object
+    2300042: Sphere055
+    2300044: Sphere056
+    2300046: Sphere059
+    2300048: Sphere060
+    2300050: TooBig0
+    2300052: V_004_FL
+    3300000: 346
+    3300002: 373
+    3300004: cake_MeshPart0
+    3300006: cake_MeshPart1
+    3300008: cake_MeshPart2
+    3300010: cake_MeshPart3
+    3300012: cake_MeshPart4
+    3300014: cake_MeshPart5
+    3300016: cake_MeshPart6
+    3300018: cake_MeshPart7
+    3300020: Cat_024
+    3300022: Cat_025
+    3300024: Cat_026
+    3300026: Cat_027
+    3300028: default001
+    3300030: Heart001
+    3300032: Inst3D28_RefRep_218
+    3300034: Line001
+    3300036: Line002
+    3300038: "magi\u0441 wand"
+    3300040: Object
+    3300042: Sphere055
+    3300044: Sphere056
+    3300046: Sphere059
+    3300048: Sphere060
+    3300050: TooBig0
+    3300052: V_004_FL
+    4300000: Cat_017
+    4300002: Sphere055
+    4300004: Sphere056
+    4300006: Object
+    4300008: Sphere059
+    4300010: Sphere060
+    4300012: "magi\u0441 wand"
+    4300014: Box009
+    4300016: Cat_024
+    4300018: Cat_025
+    4300020: Cat_026
+    4300022: Cat_027
+    4300024: Line001
+    4300026: Line002
+    4300028: Heart001
+    4300030: default001
+    4300032: cake_MeshPart0
+    4300034: cake_MeshPart1
+    4300036: cake_MeshPart2
+    4300038: cake_MeshPart3
+    4300040: cake_MeshPart4
+    4300042: cake_MeshPart5
+    4300044: cake_MeshPart6
+    4300046: cake_MeshPart7
+    4300048: TooBig0
+    4300050: Inst3D28_RefRep_218
+    4300052: V_004_FL
+    4300054: 346
+    4300056: Box010
+    4300058: 373
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Box009
+    13700002: Box010
+    13700004: Cat_017
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

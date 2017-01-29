@@ -16,6 +16,11 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
     private bool _isTrackingFound;
 
+    public bool GetIsTrackingFound()
+    {
+        return _isTrackingFound;
+    }
+
     [SerializeField] protected float Delay = 5.0f;
     private float _elapsedTime = 0.0f;
     private bool _isRequiredReset;
@@ -62,17 +67,17 @@ public class CustomTrackableEventHandler : MonoBehaviour,
     private void TrackingFound()
     {
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-        Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+        //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
         foreach (Renderer component in rendererComponents)
         {
             component.enabled = true;
         }
 
-        foreach (Collider component in colliderComponents)
-        {
-            component.enabled = true;
-        }
+        //foreach (Collider component in colliderComponents)
+        //{
+        //    component.enabled = true;
+        //}
 
         
         if (OnTrackingFound != null)
@@ -90,17 +95,17 @@ public class CustomTrackableEventHandler : MonoBehaviour,
     private void TrackingLost()
     {
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-        Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+        //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
         foreach (Renderer component in rendererComponents)
         {
             component.enabled = false;
         }
 
-        foreach (Collider component in colliderComponents)
-        {
-            component.enabled = false;
-        }
+        //foreach (Collider component in colliderComponents)
+        //{
+        //    component.enabled = false;
+        //}
 
         if (OnTrackingLost != null)
         {

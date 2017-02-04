@@ -7,7 +7,7 @@ public class EnableActionByTap : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.GetComponentInChildren<Collider>().enabled = true;
-        animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject.SetActive(true);
+        animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject.GetComponent<Renderer>().enabled = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

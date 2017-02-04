@@ -7,7 +7,7 @@ public class ToggleActionByTap : StateMachineBehaviour {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.GetComponentInChildren<Collider>().enabled = false;
-        animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject.SetActive(false);
+        animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject.GetComponent<Renderer>().enabled = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -19,7 +19,7 @@ public class ToggleActionByTap : StateMachineBehaviour {
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.GetComponentInChildren<Collider>().enabled = true;
-        animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject.SetActive(true);
+        animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject.GetComponent<Renderer>().enabled = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

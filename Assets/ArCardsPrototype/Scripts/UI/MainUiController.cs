@@ -8,8 +8,9 @@ public class MainUiController : MonoBehaviour
 
     private int _currentScreen = 0;
 
-    private int _firstIndexToSkip = 3;
-    private int _lastIndexToSkip  = 5;
+    [Space(10)]
+    [SerializeField] private int _firstIndexToSkip = 3;
+    [SerializeField] private int _lastIndexToSkip  = 6;
     private int _isFirstTimeRun   = 1;
 
     protected void Awake()
@@ -19,7 +20,7 @@ public class MainUiController : MonoBehaviour
 
         foreach (var button in MoveNextButton)
         {
-            button.onClick.AddListener(delegate { GoToNextScreen(); });
+            button.onClick.AddListener(GoToNextScreen);
         }
 
         if (UIElements.Length <= _lastIndexToSkip)

@@ -1,0 +1,286 @@
+fileFormatVersion: 2
+guid: 1a1b1ffc23b8d4149ab4d408f7905791
+timeCreated: 1486079299
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base Human001Head
+    100002: Base Human001LCalf
+    100004: Base Human001LCollarbone
+    100006: Base Human001LFoot
+    100008: Base Human001LPalm
+    100010: Base Human001LPlatform
+    100012: Base Human001LThigh
+    100014: Base Human001LUpperarm
+    100016: Base Human001Neck
+    100018: Base Human001Pelvis
+    100020: Base Human001RCalf
+    100022: Base Human001RCollarbone
+    100024: Base Human001RFoot
+    100026: Base Human001Ribcage
+    100028: Base Human001RPalm
+    100030: Base Human001RPlatform
+    100032: Base Human001RThigh
+    100034: Base Human001RUpperarm
+    100036: Base Human001Spine1
+    100038: Base Human001Spine2
+    100040: Base Human001Tail1
+    100042: Base Human001Tail2
+    100044: Base Human001Tail3
+    100046: Base Human001Tail4
+    100048: Base Human001Tail5
+    100050: Base Human001Tail6
+    100052: Base Human001Tail7
+    100054: Bone001
+    100056: Bone002
+    100058: Bone003
+    100060: Bone004
+    100062: //RootNode
+    100064: Cat_017
+    400000: Base Human001Head
+    400002: Base Human001LCalf
+    400004: Base Human001LCollarbone
+    400006: Base Human001LFoot
+    400008: Base Human001LPalm
+    400010: Base Human001LPlatform
+    400012: Base Human001LThigh
+    400014: Base Human001LUpperarm
+    400016: Base Human001Neck
+    400018: Base Human001Pelvis
+    400020: Base Human001RCalf
+    400022: Base Human001RCollarbone
+    400024: Base Human001RFoot
+    400026: Base Human001Ribcage
+    400028: Base Human001RPalm
+    400030: Base Human001RPlatform
+    400032: Base Human001RThigh
+    400034: Base Human001RUpperarm
+    400036: Base Human001Spine1
+    400038: Base Human001Spine2
+    400040: Base Human001Tail1
+    400042: Base Human001Tail2
+    400044: Base Human001Tail3
+    400046: Base Human001Tail4
+    400048: Base Human001Tail5
+    400050: Base Human001Tail6
+    400052: Base Human001Tail7
+    400054: Bone001
+    400056: Bone002
+    400058: Bone003
+    400060: Bone004
+    400062: //RootNode
+    400064: Cat_017
+    4300000: Cat_017
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Cat_017
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 75
+      lastFrame: 1075
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: Put
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: Stop
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.17879418
+        functionName: Pickup
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.23789987
+        functionName: Play
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.2774009
+        functionName: Stop
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base Human001LPlatform
+        weight: 1
+      - path: Base Human001Pelvis
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001LThigh
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001LThigh/Base Human001LCalf
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001LThigh/Base Human001LCalf/Base Human001LFoot
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001RThigh
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001RThigh/Base Human001RCalf
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001RThigh/Base Human001RCalf/Base Human001RFoot
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001LCollarbone
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001LCollarbone/Base Human001LUpperarm
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001LCollarbone/Base Human001LUpperarm/Base Human001LPalm
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001Neck
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001Neck/Base Human001Head
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001Neck/Base Human001Head/Bone001
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001Neck/Base Human001Head/Bone001/Bone002
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001Neck/Base Human001Head/Bone003
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001Neck/Base Human001Head/Bone003/Bone004
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001RCollarbone
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001RCollarbone/Base Human001RUpperarm
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Spine1/Base Human001Spine2/Base Human001Ribcage/Base
+          Human001RCollarbone/Base Human001RUpperarm/Base Human001RPalm
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Tail1
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Tail1/Base Human001Tail2
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Tail1/Base Human001Tail2/Base Human001Tail3
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Tail1/Base Human001Tail2/Base Human001Tail3/Base
+          Human001Tail4
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Tail1/Base Human001Tail2/Base Human001Tail3/Base
+          Human001Tail4/Base Human001Tail5
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Tail1/Base Human001Tail2/Base Human001Tail3/Base
+          Human001Tail4/Base Human001Tail5/Base Human001Tail6
+        weight: 1
+      - path: Base Human001Pelvis/Base Human001Tail1/Base Human001Tail2/Base Human001Tail3/Base
+          Human001Tail4/Base Human001Tail5/Base Human001Tail6/Base Human001Tail7
+        weight: 1
+      - path: Base Human001RPlatform
+        weight: 1
+      - path: Cat_017
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 60
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 90
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ToggleActionByTap : StateMachineBehaviour {
-
-    //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+public class EnableActionByTap : StateMachineBehaviour
+{
+    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.GetComponentInChildren<Collider>().enabled = false;
+        animator.gameObject.GetComponentInChildren<Collider>().enabled = true;
+        animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject.SetActive(true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -15,10 +16,10 @@ public class ToggleActionByTap : StateMachineBehaviour {
     //}
 
     //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        animator.gameObject.GetComponentInChildren<Collider>().enabled = true;
-    }
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

@@ -7,6 +7,7 @@ public class DisableActionByTap : StateMachineBehaviour {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.GetComponentInChildren<Collider>().enabled = false;
+        animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject.SetActive(false);
     }
 
 

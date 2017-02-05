@@ -722,6 +722,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 0.028443491
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010466522120, guid: 89cd6defcf7f67f4ba752399d45e8f54, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89cd6defcf7f67f4ba752399d45e8f54, type: 2}
   m_IsPrefabParent: 0
@@ -1524,7 +1528,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011017677494, guid: b1976140bf75fae4d93bc900d83b765b, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1976140bf75fae4d93bc900d83b765b, type: 2}
@@ -1961,7 +1965,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.08
+  orthographic size: 0.53
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

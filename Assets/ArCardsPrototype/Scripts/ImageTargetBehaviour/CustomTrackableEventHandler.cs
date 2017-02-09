@@ -10,8 +10,9 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
     [SerializeField] protected Transform MainControllerTransform;
     [SerializeField] protected GameObject TargetAnimatorsParent;
+    [SerializeField] protected AudioSource AudioSourceRef;
 
-    public Action<Transform, GameObject, bool> OnTrackingFound;
+    public Action<Transform, GameObject, AudioSource, bool> OnTrackingFound;
     public Action OnTrackingLost;
 
     private bool _isTrackingFound;
@@ -71,7 +72,15 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
         foreach (Renderer component in rendererComponents)
         {
-            component.enabled = true;
+            if (component.gameObject.GetComponent<TouchFingerQuad>() != null)
+            {
+                component.material.SetFloat("_ScaleX", 3.0f);
+                component.material.SetFloat("_ScaleY", 3.0f);
+            }
+            else
+            {
+                component.enabled = true;
+            }
         }
 
         //foreach (Collider component in colliderComponents)
@@ -82,7 +91,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         
         if (OnTrackingFound != null)
         {
-            OnTrackingFound(MainControllerTransform, TargetAnimatorsParent, _isRequiredReset);
+            OnTrackingFound(MainControllerTransform, TargetAnimatorsParent, AudioSourceRef, _isRequiredReset);
             _isRequiredReset = false;
         }
 
@@ -99,7 +108,15 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
         foreach (Renderer component in rendererComponents)
         {
-            component.enabled = false;
+            if (component.gameObject.GetComponent<TouchFingerQuad>() != null)
+            {
+                component.material.SetFloat("_ScaleX", 0.0f);
+                component.material.SetFloat("_ScaleY", 0.0f);
+            }
+            else
+            {
+                component.enabled = false;
+            }
         }
 
         //foreach (Collider component in colliderComponents)

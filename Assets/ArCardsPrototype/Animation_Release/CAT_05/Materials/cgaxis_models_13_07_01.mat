@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: cgaxis_models_13_07_01
-  m_Shader: {fileID: 4800000, guid: 9a739e6afb23b4346a215a43a0514ab5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 5a2e0c16f69f3f646bfeef25d2dbe6f2, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1

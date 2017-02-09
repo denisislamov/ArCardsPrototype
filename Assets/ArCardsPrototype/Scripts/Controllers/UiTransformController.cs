@@ -62,7 +62,10 @@ public class UiTransformController : MonoBehaviour
 
     public void Reset()
     {
-        TargetTransform.localScale = Vector3.one;
-        TargetTransform.localRotation = Quaternion.identity;
+        if (TargetTransform != null)
+        {
+            TargetTransform.localScale = Vector3.one;
+            TargetTransform.localRotation = Quaternion.identity;
+        }
     }
 }

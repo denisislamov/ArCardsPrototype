@@ -170,8 +170,8 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/Admin/Documents/ArCardsPrototype/user.keystore
+  AndroidKeyaliasName: arcardsprototype
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 1

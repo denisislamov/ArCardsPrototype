@@ -10,10 +10,10 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
     [SerializeField] protected Transform MainControllerTransform;
     [SerializeField] protected GameObject TargetAnimatorsParent;
-    [SerializeField] protected AudioSource AudioSourceRef;
+    [SerializeField] protected PlaySound PlaySoundRef;
 
-    public Action<Transform, GameObject, AudioSource, bool> OnTrackingFound;
-    public Action OnTrackingLost;
+    public Action<Transform, GameObject, PlaySound, bool> OnTrackingFound;
+    public Action<PlaySound> OnTrackingLost;
 
     private bool _isTrackingFound;
 
@@ -91,7 +91,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         
         if (OnTrackingFound != null)
         {
-            OnTrackingFound(MainControllerTransform, TargetAnimatorsParent, AudioSourceRef, _isRequiredReset);
+            OnTrackingFound(MainControllerTransform, TargetAnimatorsParent, PlaySoundRef, _isRequiredReset);
             _isRequiredReset = false;
         }
 
@@ -126,7 +126,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
         if (OnTrackingLost != null)
         {
-            OnTrackingLost();
+            OnTrackingLost(PlaySoundRef);
         }
 
         _isTrackingFound = false;

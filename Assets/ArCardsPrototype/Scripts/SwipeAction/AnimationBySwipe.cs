@@ -10,9 +10,14 @@ public class AnimationBySwipe : MonoBehaviour
 
     private bool _isMouseOver = true;
 
+    [Space(10)]
+    [SerializeField] protected bool IsRandomAnimationIndex;
+    [SerializeField] protected int MinIndex = 1;
+    [SerializeField] protected int MaxIndex = 1;
+
+
     protected void OnEnable()
     {
-        Debug.Log(gameObject.name + " OnEnable()");
         EasyTouch.On_SwipeEnd += OnSwipeEnd;
     }
 
@@ -33,7 +38,6 @@ public class AnimationBySwipe : MonoBehaviour
 
     private void OnSwipeEnd(Gesture gesture)
     {
-        Debug.Log(gameObject.name + " AnimationByTap.OnSwipeEnd ()");
         if (!_isMouseOver)
         {
             return;
@@ -46,7 +50,15 @@ public class AnimationBySwipe : MonoBehaviour
 
         foreach (var animatorRef in AnimatorsRef)
         {
-            animatorRef.SetTrigger(AnimationTriggerValueName);
+            if (!IsRandomAnimationIndex)
+            {
+                animatorRef.SetTrigger(AnimationTriggerValueName);
+            }
+            else
+            {
+                var suffix = "_" + Random.Range(MinIndex, MaxIndex + 1);
+                animatorRef.SetTrigger(AnimationTriggerValueName + suffix);
+            }
         }
     }
 

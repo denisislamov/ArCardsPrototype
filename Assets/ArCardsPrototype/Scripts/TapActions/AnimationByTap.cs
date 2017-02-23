@@ -9,6 +9,11 @@ public class AnimationByTap : MonoBehaviour
 
     private bool _isMouseOver;
 
+    [Space(10)]
+    [SerializeField] protected bool IsRandomAnimationIndex;
+    [SerializeField] protected int MinIndex = 1;
+    [SerializeField] protected int MaxIndex = 1;
+
     protected void OnEnable()
     {
         Debug.Log(gameObject.name + " OnEnable()");
@@ -48,14 +53,22 @@ public class AnimationByTap : MonoBehaviour
             return;
         }
 
-        if (!CustomTrackableEventHandlerRef.GetIsTrackingFound())
+        if (CustomTrackableEventHandlerRef != null && !CustomTrackableEventHandlerRef.GetIsTrackingFound())
         {
             return;
         }
 
         foreach (var animatorRef in AnimatorsRef)
         {
-            animatorRef.SetTrigger(AnimationTriggerValueName);
+            if (!IsRandomAnimationIndex)
+            {
+                animatorRef.SetTrigger(AnimationTriggerValueName);
+            }
+            else
+            {
+                var suffix = "_" + Random.Range(MinIndex, MaxIndex + 1);
+                animatorRef.SetTrigger(AnimationTriggerValueName + suffix);
+            }
         }
     }
 }

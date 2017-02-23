@@ -8,8 +8,7 @@ public class ImageTargetManager : MonoBehaviour
     [Space(5)]
     [SerializeField] protected UiTransformController UiTransformControllerRef;
     [SerializeField] protected UiAnimationController UiAnimationControllerRef;
-    [SerializeField] protected AudioController AudioControllerRef;
-
+    
     protected void OnEnable()
     {
         foreach (var trackableEventHandler in TrackableEventHandlers)
@@ -28,13 +27,12 @@ public class ImageTargetManager : MonoBehaviour
         }
     }
 
-    public void TrackingFound(Transform transformRef, GameObject animatorsParent, AudioSource audioSource, bool isRequiredReset)
+    public void TrackingFound(Transform transformRef, GameObject animatorsParent, PlaySound playSoundRef, bool isRequiredReset)
     {
         UiTransformControllerRef.TargetTransform = transformRef;
         UiAnimationControllerRef.AnimatorsParent = animatorsParent;
 
-        AudioControllerRef.AudioSourceRef        = audioSource;
-        AudioControllerRef.Resume();
+        playSoundRef.Resume();
 
         if (!isRequiredReset)
         {
@@ -43,15 +41,13 @@ public class ImageTargetManager : MonoBehaviour
 
         UiTransformControllerRef.Reset();
         UiAnimationControllerRef.Reset();
-
-        AudioControllerRef.Play();
     }
 
-    public void TrackingLost()
+    public void TrackingLost(PlaySound playSoundRef)
     {
         UiTransformControllerRef.TargetTransform = null;
         UiAnimationControllerRef.AnimatorsParent = null;
 
-        AudioControllerRef.Pause();
+        playSoundRef.Pause();
     }
 }

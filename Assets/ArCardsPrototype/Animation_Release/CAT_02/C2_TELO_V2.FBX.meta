@@ -121,6 +121,13 @@ ModelImporter:
       curves: []
       events:
       - time: 0
+        functionName: TurnOn
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
         functionName: Put
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -133,6 +140,13 @@ ModelImporter:
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
+        messageOptions: 0
+      - time: 0.0065871053
+        functionName: PlaySoundByIndex
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 7
         messageOptions: 0
       - time: 0.19958419
         functionName: Pickup
@@ -155,8 +169,8 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0
-        functionName: TurnOn
+      - time: 0.99416155
+        functionName: StopSound
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

@@ -19,6 +19,7 @@ public class PlaySound : MonoBehaviour
 
     public void PlaySoundByIndex(int index)
     {
+        Debug.Log(gameObject.name + " PlaySoundByIndex " + index);
         AudioSourceRef.clip = AudioClips[index];
         AudioSourceRef.Play();
         BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume/2;
@@ -28,6 +29,7 @@ public class PlaySound : MonoBehaviour
 
     public void StopSound()
     {
+        Debug.Log(gameObject.name + " StopSound");
         AudioSourceRef.Stop();
         BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume;
 
@@ -41,6 +43,7 @@ public class PlaySound : MonoBehaviour
             return;
         }
 
+        Debug.Log(gameObject.name + " Resume");
         AudioSourceRef.UnPause();
         BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume / 2;
 
@@ -50,6 +53,7 @@ public class PlaySound : MonoBehaviour
 
     public void Pause()
     {
+        Debug.Log(gameObject.name + " Pause");
         AudioSourceRef.Pause();
         BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume;
 

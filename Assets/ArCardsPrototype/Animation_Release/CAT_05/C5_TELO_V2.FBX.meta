@@ -126,6 +126,20 @@ ModelImporter:
       curves: []
       events:
       - time: 0
+        functionName: TurnOn
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: KinematicRigidbodySwitchOn
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
         functionName: Stop
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -160,8 +174,8 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0
-        functionName: TurnOn
+      - time: 0.4581066
+        functionName: KinematicRigidbodySwitchOff
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -169,6 +183,13 @@ ModelImporter:
         messageOptions: 0
       - time: 0.99534845
         functionName: TurnOff
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.99739724
+        functionName: KinematicRigidbodySwitchOn
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

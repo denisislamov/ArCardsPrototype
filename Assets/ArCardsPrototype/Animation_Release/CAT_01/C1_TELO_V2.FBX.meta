@@ -121,6 +121,13 @@ ModelImporter:
       curves: []
       events:
       - time: 0
+        functionName: TurnOn
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
         functionName: Put
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -141,7 +148,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.23700625
+      - time: 0.23146608
         functionName: Play
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -150,13 +157,6 @@ ModelImporter:
         messageOptions: 0
       - time: 0.2889813
         functionName: Stop
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0
-        functionName: TurnOn
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

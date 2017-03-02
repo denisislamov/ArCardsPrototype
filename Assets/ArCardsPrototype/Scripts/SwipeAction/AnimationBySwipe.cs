@@ -48,6 +48,7 @@ public class AnimationBySwipe : MonoBehaviour
             return;
         }
 
+        var suffix = "_" + Random.Range(MinIndex, MaxIndex + 1);
         foreach (var animatorRef in AnimatorsRef)
         {
             if (!IsRandomAnimationIndex)
@@ -56,7 +57,6 @@ public class AnimationBySwipe : MonoBehaviour
             }
             else
             {
-                var suffix = "_" + Random.Range(MinIndex, MaxIndex + 1);
                 animatorRef.SetTrigger(AnimationTriggerValueName + suffix);
             }
         }

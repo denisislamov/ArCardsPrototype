@@ -121,6 +121,13 @@ ModelImporter:
       curves: []
       events:
       - time: 0
+        functionName: PlaySoundByIndex
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 11
+        messageOptions: 0
+      - time: 1
         functionName: StopSound
         data: 
         objectReferenceParameter: {instanceID: 0}

@@ -146,7 +146,7 @@ ModelImporter:
     4300024: Object143
     4300026: Object145
     4300028: Object147
-    7400000: Take 001
+    7400000: Money
     9500000: //RootNode
     13700000: Cat_017
   materials:
@@ -171,7 +171,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Money
       takeName: Take 001
       firstFrame: 0
       lastFrame: 920

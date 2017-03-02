@@ -14,24 +14,33 @@ public class PlaySound : MonoBehaviour
 
     protected void Awake()
     {
-        _defaultBackgroundVolume = BackgroundMusicAudioSourceRef.volume;
+        if (BackgroundMusicAudioSourceRef != null)
+        {
+            _defaultBackgroundVolume = BackgroundMusicAudioSourceRef.volume;
+        }
     }
 
     public void PlaySoundByIndex(int index)
     {
-        Debug.Log(gameObject.name + " PlaySoundByIndex " + index);
         AudioSourceRef.clip = AudioClips[index];
         AudioSourceRef.Play();
-        BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume/2;
+
+        if (BackgroundMusicAudioSourceRef != null)
+        {
+            BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume/2;
+        }
 
         _isPaused = false;
     }
 
     public void StopSound()
     {
-        Debug.Log(gameObject.name + " StopSound");
         AudioSourceRef.Stop();
-        BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume;
+
+        if (BackgroundMusicAudioSourceRef != null)
+        {
+            BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume;
+        }
 
         _isPaused = false;
     }
@@ -43,9 +52,12 @@ public class PlaySound : MonoBehaviour
             return;
         }
 
-        Debug.Log(gameObject.name + " Resume");
         AudioSourceRef.UnPause();
-        BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume / 2;
+
+        if (BackgroundMusicAudioSourceRef != null)
+        {
+            BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume/2;
+        }
 
         _isPaused = false;
 
@@ -53,9 +65,12 @@ public class PlaySound : MonoBehaviour
 
     public void Pause()
     {
-        Debug.Log(gameObject.name + " Pause");
         AudioSourceRef.Pause();
-        BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume;
+
+        if (BackgroundMusicAudioSourceRef != null)
+        {
+            BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume;
+        }
 
         _isPaused = true;
     }

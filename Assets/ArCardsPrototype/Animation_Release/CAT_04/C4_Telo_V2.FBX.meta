@@ -72,7 +72,7 @@ ModelImporter:
     400062: //RootNode
     400064: Cat_017
     4300000: Cat_017
-    7400000: Take 001
+    7400000: Shary
     9500000: //RootNode
     13700000: Cat_017
   materials:
@@ -97,7 +97,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Shary
       takeName: Take 001
       firstFrame: 75
       lastFrame: 1075

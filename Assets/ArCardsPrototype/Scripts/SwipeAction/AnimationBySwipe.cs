@@ -38,6 +38,11 @@ public class AnimationBySwipe : MonoBehaviour
 
     private void OnSwipeEnd(Gesture gesture)
     {
+        if (gameObject.GetComponent<Collider>() == null)
+        {
+            return;
+        }
+
         if (!_isMouseOver)
         {
             return;

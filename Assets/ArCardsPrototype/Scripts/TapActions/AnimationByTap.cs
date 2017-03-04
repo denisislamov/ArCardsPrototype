@@ -16,8 +16,7 @@ public class AnimationByTap : MonoBehaviour
 
     protected void OnEnable()
     {
-        Debug.Log(gameObject.name + " OnEnable()");
-        EasyTouch.On_SimpleTap += OnSimpleTap;
+       EasyTouch.On_SimpleTap += OnSimpleTap;
     }
 
     protected void OnDisable()
@@ -47,7 +46,11 @@ public class AnimationByTap : MonoBehaviour
 
     private void OnSimpleTap(Gesture gesture)
     {
-        Debug.Log(gameObject.name + " AnimationByTap.OnSimpleTap ()");
+        if (gameObject.GetComponent<Collider>() == null)
+        {
+            return;
+        }
+
         if (!_isMouseOver)
         {
             return;

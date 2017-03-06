@@ -104,6 +104,9 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
+        name: _Shininess
+      second: 0.03
+    - first:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
@@ -121,7 +124,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.009529414, g: 0.009529414, b: 0.009529414, a: 1}
+      second: {r: 0.19852942, g: 0.19706964, b: 0.19706964, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

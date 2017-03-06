@@ -121,6 +121,13 @@ ModelImporter:
       curves: []
       events:
       - time: 0
+        functionName: TurnOn
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
         functionName: PlaySoundByIndex
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -143,13 +150,6 @@ ModelImporter:
         messageOptions: 0
       - time: 0
         functionName: Stop
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0
-        functionName: TurnOn
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -178,6 +178,13 @@ ModelImporter:
         messageOptions: 0
       - time: 1
         functionName: TurnOff
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9983123
+        functionName: StopSound
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

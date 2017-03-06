@@ -14,7 +14,13 @@ public class AnimationByTap : MonoBehaviour
     [SerializeField] protected int MinIndex = 1;
     [SerializeField] protected int MaxIndex = 1;
 
-    protected void OnEnable()
+    protected void Awake()
+    {
+        CustomTrackableEventHandlerRef.OnTrackingFoundSimple += SubscribeEvent;
+        CustomTrackableEventHandlerRef.OnTrackingLostSimple += UnsubscribeEvent;
+    }
+
+    protected void SubscribeEvent()
     {
        EasyTouch.On_SimpleTap += OnSimpleTap;
     }
@@ -27,6 +33,9 @@ public class AnimationByTap : MonoBehaviour
     protected void OnDestroy()
     {
         UnsubscribeEvent();
+
+        CustomTrackableEventHandlerRef.OnTrackingFoundSimple -= SubscribeEvent;
+        CustomTrackableEventHandlerRef.OnTrackingLostSimple -= UnsubscribeEvent;
     }
 
     protected void UnsubscribeEvent()

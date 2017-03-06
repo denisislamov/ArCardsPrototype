@@ -12,7 +12,10 @@ public class CustomTrackableEventHandler : MonoBehaviour,
     [SerializeField] protected GameObject TargetAnimatorsParent;
     [SerializeField] protected PlaySound PlaySoundRef;
 
+    public Action OnTrackingFoundSimple;
     public Action<Transform, GameObject, PlaySound, bool> OnTrackingFound;
+
+    public Action OnTrackingLostSimple;
     public Action<PlaySound> OnTrackingLost;
 
     private bool _isTrackingFound;
@@ -88,6 +91,10 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         //    component.enabled = true;
         //}
 
+        if (OnTrackingFoundSimple != null)
+        {
+            OnTrackingFoundSimple();
+        }
         
         if (OnTrackingFound != null)
         {
@@ -123,6 +130,11 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         //{
         //    component.enabled = false;
         //}
+
+        if (OnTrackingLostSimple != null)
+        {   
+            OnTrackingLostSimple();
+        }
 
         if (OnTrackingLost != null)
         {

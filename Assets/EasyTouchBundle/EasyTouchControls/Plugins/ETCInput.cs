@@ -741,7 +741,7 @@ public class ETCInput : MonoBehaviour{
 			return axis.axisValue;
 		}
 		else{
-			Debug.LogWarning("ETCInput : " + axisName + " doesn't exist");
+			//Debug.LogWarning("ETCInput : " + axisName + " doesn't exist");
 			return 0;
 		}
 	}
@@ -752,7 +752,7 @@ public class ETCInput : MonoBehaviour{
 			return axis.axisSpeedValue;
 		}
 		else{
-			Debug.LogWarning(axisName + " doesn't exist");
+			//Debug.LogWarning(axisName + " doesn't exist");
 			return 0;
 		}
 		

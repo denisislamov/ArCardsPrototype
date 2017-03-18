@@ -11,6 +11,8 @@ public class PickupItem : MonoBehaviour
     [SerializeField] protected Transform Target;
     [SerializeField] protected Transform Anchor;
 
+    [SerializeField] protected Vector3 RotationOffset;
+    [SerializeField] protected float Delay = 1.0f;
 
     public void Start()
     {
@@ -24,14 +26,22 @@ public class PickupItem : MonoBehaviour
     public void Pickup()
     {
         Target.parent = Anchor;
+        StartCoroutine("DelayRotationOffset");
     }
 
     public void Put()
     {
+        StopCoroutine("DelayRotationOffset");
         Target.parent = _oldParent;
 
         Target.localPosition = _startPosition;
         Target.localRotation = _startRotation;
         Target.localScale = _startScale;
+    }
+
+    private IEnumerator DelayRotationOffset()
+    {
+        yield return new WaitForSeconds(Delay);
+        Target.localRotation *= Quaternion.Euler(RotationOffset);
     }
 }

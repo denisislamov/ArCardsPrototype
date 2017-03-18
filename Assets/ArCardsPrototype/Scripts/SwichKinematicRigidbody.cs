@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SwitchKinematicRigidbody : MonoBehaviour {
+public class SwichKinematicRigidbody : MonoBehaviour
+{
     [SerializeField] protected Rigidbody RigidbodyRef;
-    [SerializeField] protected Transform parent;
+    [SerializeField] protected Transform Parent;
     [SerializeField] protected Vector3 ForceVector;
 
-   public void KinematicRigidbodySwitchOn()
+    public void KinematicRigidbodySwitchOn()
     {
         RigidbodyRef.isKinematic = true;
     }
@@ -14,7 +15,7 @@ public class SwitchKinematicRigidbody : MonoBehaviour {
     public void KinematicRigidbodySwitchOff()
     {
         RigidbodyRef.isKinematic = false;
-        RigidbodyRef.gameObject.transform.parent = parent;
+        RigidbodyRef.gameObject.transform.parent = Parent;
         RigidbodyRef.AddForce(ForceVector, ForceMode.Acceleration);
     }
 }

@@ -23,7 +23,7 @@ public class InitErrorHandler : MonoBehaviour
         VuforiaAbstractBehaviour vuforia = FindObjectOfType<VuforiaAbstractBehaviour>();
         vuforia.RegisterVuforiaInitErrorCallback(OnInitError);
 
-        // Get the UI Canvas that contains (parent of) the error text box
+        // Get the UI Canvas that contains (Parent of) the error text box
         if (errorText)
         {
             errorCanvas = errorText.GetComponentsInParent<Canvas>(true)[0];

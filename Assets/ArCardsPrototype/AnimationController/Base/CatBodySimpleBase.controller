@@ -90,7 +90,7 @@ AnimatorController:
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
     m_DefaultWeight: 0
-    m_IKPass: 0
+    m_IKPass: 1
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
 --- !u!114 &114000010110142268
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000010494497704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000011413878534
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000012313018654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000012625848908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000013010124138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000013300728288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000013389101412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000013649331064
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000013706745110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000013749810894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!114 &114000013929150858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dcd9fb3104bf488429d24edcd5554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRever: 0
+  IsRevert: 0
 --- !u!1101 &1101000010077637450
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -745,27 +745,6 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.9375
   m_HasExitTime: 1
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &1101000013701160988
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_Conditions: []
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102000013450149434}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.1
-  m_TransitionOffset: 0
-  m_ExitTime: 0.9
-  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1292,7 +1271,7 @@ AnimatorStateMachine:
     m_Position: {x: 252, y: 24, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000011252184942}
-    m_Position: {x: 540, y: 180, z: 0}
+    m_Position: {x: 252, y: 240, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107000010085211518}
@@ -1303,14 +1282,13 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107000012248760516}
     m_Position: {x: 492, y: -120, z: 0}
-  m_AnyStateTransitions:
-  - {fileID: 1101000013701160988}
+  m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 372, y: 276, z: 0}
-  m_EntryPosition: {x: 168, y: 276, z: 0}
-  m_ExitPosition: {x: 168, y: 324, z: 0}
+  m_AnyStatePosition: {x: 504, y: 180, z: 0}
+  m_EntryPosition: {x: 48, y: 180, z: 0}
+  m_ExitPosition: {x: 48, y: 240, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102000013450149434}
 --- !u!1107 &1107000013421729030
@@ -1339,7 +1317,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 672, y: 252, z: 0}
-  m_EntryPosition: {x: 324, y: 240, z: 0}
+  m_EntryPosition: {x: 312, y: 240, z: 0}
   m_ExitPosition: {x: 672, y: 204, z: 0}
   m_ParentStateMachinePosition: {x: 636, y: 72, z: 0}
   m_DefaultState: {fileID: 1102000010329044076}

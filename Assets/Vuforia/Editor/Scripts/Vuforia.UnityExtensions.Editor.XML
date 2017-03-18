@@ -97,7 +97,7 @@
         </member>
         <member name="P:Vuforia.EditorClasses.DigitalEyewearEditor.ParentAnchorPoint">
             <summary>
-            Access parent anchor of serialized property
+            Access Parent anchor of serialized property
             </summary>
         </member>
         <member name="M:Vuforia.EditorClasses.ProjectParser.GetScenesInDirectory(System.String)">

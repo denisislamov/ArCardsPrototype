@@ -54,7 +54,7 @@
         </member>
         <member name="M:Vuforia.DigitalEyewearAbstractBehaviour.SetParentAnchorPoint(UnityEngine.Transform)">
             <summary>
-            This method is used to set the parent anchor point in the Unity editor
+            This method is used to set the Parent anchor point in the Unity editor
             </summary>
         </member>
         <member name="M:Vuforia.DigitalEyewearAbstractBehaviour.SetCameraOffset(System.Single)">
@@ -1748,7 +1748,7 @@
             <summary>
             This class encapsulates updating the camera with device tracking data.
             For now it is an internal class, not exposing any public API to developers.
-            If this changes in the future, a public abstract parent class should be introduced.
+            If this changes in the future, a public abstract Parent class should be introduced.
             </summary>
         </member>
         <member name="M:Vuforia.DeviceTrackingManager.RecenterPose(UnityEngine.Transform,UnityEngine.Vector3)">
@@ -1982,7 +1982,7 @@
         </member>
         <member name="M:Vuforia.StencilHideExcessAreaClipping.CreateQuad(UnityEngine.GameObject,System.String,UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Vector3,System.Int32)">
             <summary>
-            This function is used to create a named plane for a given parent with specified transformation and layer id
+            This function is used to create a named plane for a given Parent with specified transformation and layer id
             </summary>
         </member>
         <member name="M:Vuforia.StencilHideExcessAreaClipping.SetPlanesRenderingActive(System.Boolean)">
@@ -1997,7 +1997,7 @@
         </member>
         <member name="M:Vuforia.LegacyHideExcessAreaClipping.CreateQuad(UnityEngine.GameObject,System.String,UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Vector3,System.Int32)">
             <summary>
-            This function is used to create a named plane for a given parent with specified transformation and layer id
+            This function is used to create a named plane for a given Parent with specified transformation and layer id
             </summary>
         </member>
         <member name="M:Vuforia.LegacyHideExcessAreaClipping.SetPlanesRenderingActive(System.Boolean)">
@@ -4278,7 +4278,7 @@
         </member>
         <member name="P:Vuforia.VuforiaManager.ParentAnchorPoint">
             <summary>
-            A handle to the parent transform of the ARCameraTransform that will be updated if one of the Target World Center Modes is used.
+            A handle to the Parent transform of the ARCameraTransform that will be updated if one of the Target World Center Modes is used.
             </summary>
         </member>
         <member name="P:Vuforia.VuforiaManager.Initialized">
@@ -4608,12 +4608,12 @@
         </member>
         <member name="P:Vuforia.SmartTerrainTrackable.LocalPosition">
             <summary>
-            Get the local 3D position of the smart terrain trackable relative to the parent
+            Get the local 3D position of the smart terrain trackable relative to the Parent
             </summary>
         </member>
         <member name="P:Vuforia.SmartTerrainTrackable.Parent">
             <summary>
-            The parent trackable in the Smart Terrain scene graph hierarchy.
+            The Parent trackable in the Smart Terrain scene graph hierarchy.
             If this is the root node, Parent is null
             </summary>
         </member>

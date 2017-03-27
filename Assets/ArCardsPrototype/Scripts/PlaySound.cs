@@ -18,6 +18,8 @@ public class PlaySound : MonoBehaviour
         {
             _defaultBackgroundVolume = BackgroundMusicAudioSourceRef.volume;
         }
+
+        StopSound();
     }
 
     public void PlaySoundByIndex(int index)

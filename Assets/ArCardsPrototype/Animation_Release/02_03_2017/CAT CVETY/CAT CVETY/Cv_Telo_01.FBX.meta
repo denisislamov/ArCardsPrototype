@@ -141,6 +141,20 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0
+        functionName: TurnOn
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.0016694496
+        functionName: PlaySoundByIndex
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 12
+        messageOptions: 0
       - time: 0.21078284
         functionName: Pickup
         data: 
@@ -183,22 +197,8 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0
-        functionName: PlaySoundByIndex
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 12
-        messageOptions: 0
       - time: 0.999425
         functionName: StopSound
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0
-        functionName: TurnOn
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

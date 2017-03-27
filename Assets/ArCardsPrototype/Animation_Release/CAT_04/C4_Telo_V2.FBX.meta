@@ -135,13 +135,6 @@ ModelImporter:
         intParameter: 0
         messageOptions: 0
       - time: 0
-        functionName: PlaySoundByIndex
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 12
-        messageOptions: 0
-      - time: 0
         functionName: TurnOn
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -154,6 +147,13 @@ ModelImporter:
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
+        messageOptions: 0
+      - time: 0.0025041737
+        functionName: PlaySoundByIndex
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 12
         messageOptions: 0
       - time: 0.17879418
         functionName: Pickup

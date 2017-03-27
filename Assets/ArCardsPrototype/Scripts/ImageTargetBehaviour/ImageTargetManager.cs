@@ -32,7 +32,10 @@ public class ImageTargetManager : MonoBehaviour
         UiTransformControllerRef.TargetTransform = transformRef;
         UiAnimationControllerRef.AnimatorsParent = animatorsParent;
 
-        playSoundRef.Resume();
+        if (playSoundRef != null)
+        {
+            playSoundRef.Resume();
+        }
 
         if (!isRequiredReset)
         {
@@ -48,6 +51,9 @@ public class ImageTargetManager : MonoBehaviour
         UiTransformControllerRef.TargetTransform = null;
         UiAnimationControllerRef.AnimatorsParent = null;
 
-        playSoundRef.Pause();
+        if (playSoundRef != null)
+        {
+            playSoundRef.Pause();
+        }
     }
 }

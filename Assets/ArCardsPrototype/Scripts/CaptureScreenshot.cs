@@ -14,6 +14,9 @@ public class CaptureScreenshot : MonoBehaviour
     private SharePlugin _sharePlugin;
     private UtilsPlugin _utilsPlugin;
 
+    [SerializeField] protected AudioSource SnapAudioSource;
+    [SerializeField] protected GameObject Splash;
+
 #if UNITY_IPHONE
     [DllImport("__Internal")]
     private static extern bool saveToGallery(string path);
@@ -55,6 +58,11 @@ public class CaptureScreenshot : MonoBehaviour
         Application.CaptureScreenshot(androidPath);
 
         var obj = new AndroidJavaClass("com.ryanwebb.androidscreenshot.MainActivity");
+
+        SnapAudioSource.Play();
+        Splash.SetActive(true);
+        yield return new WaitForSeconds(.2f);
+        Splash.SetActive(false);
 
         while (!photoSaved)
         {

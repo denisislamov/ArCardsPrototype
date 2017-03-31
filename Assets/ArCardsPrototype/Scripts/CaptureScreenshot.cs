@@ -78,6 +78,11 @@ public class CaptureScreenshot : MonoBehaviour
 
         Application.CaptureScreenshot(screenshotFilename);
 
+        SnapAudioSource.Play();
+        Splash.SetActive(true);
+        yield return new WaitForSeconds(.2f);
+        Splash.SetActive(false);
+
         while (!photoSaved)
         {
             photoSaved = saveToGallery(iosPath);

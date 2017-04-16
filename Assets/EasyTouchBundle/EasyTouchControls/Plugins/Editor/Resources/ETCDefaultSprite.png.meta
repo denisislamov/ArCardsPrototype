@@ -31,14 +31,17 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 1024
+  maxTextureSize: 128
   textureSettings:
     filterMode: -1
     aniso: -1
@@ -46,20 +49,24 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: ETCThumb
+    - serializedVersion: 2
+      name: ETCThumb
       rect:
         serializedVersion: 2
         x: 0
@@ -67,9 +74,12 @@ TextureImporter:
         width: 256
         height: 255
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ETCFrame
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ETCFrame
       rect:
         serializedVersion: 2
         x: 257
@@ -77,9 +87,12 @@ TextureImporter:
         width: 254
         height: 254
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 6, y: 6, z: 6, w: 6}
-    - name: ETCArrow
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ETCArrow
       rect:
         serializedVersion: 2
         x: 518
@@ -87,9 +100,12 @@ TextureImporter:
         width: 242
         height: 141
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ETCCircle
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ETCCircle
       rect:
         serializedVersion: 2
         x: 776
@@ -97,9 +113,12 @@ TextureImporter:
         width: 241
         height: 237
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ETCButtonNormal
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ETCButtonNormal
       rect:
         serializedVersion: 2
         x: 0
@@ -107,9 +126,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ETCButtonPressed
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ETCButtonPressed
       rect:
         serializedVersion: 2
         x: 259
@@ -117,9 +139,12 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ETCDPad
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ETCDPad
       rect:
         serializedVersion: 2
         x: 2
@@ -127,9 +152,12 @@ TextureImporter:
         width: 509
         height: 509
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ETCArea
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ETCArea
       rect:
         serializedVersion: 2
         x: 524
@@ -137,7 +165,12 @@ TextureImporter:
         width: 488
         height: 487
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
   spritePackingTag: ETCSprites
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

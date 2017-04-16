@@ -37,13 +37,9 @@ public class CaptureScreenshot : MonoBehaviour
 
     public IEnumerator TakeImage()
     {
-      
         var photoSaved = false;
-        Debug.Log("TakeImage Start");
-
         var date = DateTime.Now.ToString("dd_MM_yy_H_mm_ss");
         var screenshotFilename = "arCard" + "_" + date + ".png";
-
 
         // ANDROID
 #if UNITY_ANDROID
@@ -55,14 +51,14 @@ public class CaptureScreenshot : MonoBehaviour
         {
             Directory.CreateDirectory(pathonly);
         }
-        Application.CaptureScreenshot(androidPath);
-
-        var obj = new AndroidJavaClass("com.ryanwebb.androidscreenshot.MainActivity");
 
         SnapAudioSource.Play();
         Splash.SetActive(true);
         yield return new WaitForSeconds(.2f);
         Splash.SetActive(false);
+
+        Application.CaptureScreenshot(androidPath);
+        var obj = new AndroidJavaClass("com.ryanwebb.androidscreenshot.MainActivity");
 
         while (!photoSaved)
         {
@@ -76,17 +72,16 @@ public class CaptureScreenshot : MonoBehaviour
 #if UNITY_IPHONE
         string iosPath = Application.persistentDataPath + "/" + screenshotFilename;
 
-        Application.CaptureScreenshot(screenshotFilename);
-
         SnapAudioSource.Play();
         Splash.SetActive(true);
         yield return new WaitForSeconds(.2f);
         Splash.SetActive(false);
 
+        Application.CaptureScreenshot(screenshotFilename);
+
         while (!photoSaved)
         {
             photoSaved = saveToGallery(iosPath);
-
             yield return new WaitForSeconds(.5f);
         }
 

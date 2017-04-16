@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="07_r_b" size="17.000000 24.083334" />
+    <ImageTarget name="06_r_b" size="17.000000 24.083334" />
+    <ImageTarget name="05_r_b" size="17.000000 24.083334" />
+    <ImageTarget name="04_r_b" size="17.000000 24.083334" />
+    <ImageTarget name="03_r_b" size="17.000000 24.083334" />
+    <ImageTarget name="02_r_b" size="17.000000 24.083334" />
+    <ImageTarget name="01_r_b" size="17.000000 24.083334" />
     <ImageTarget name="07_r_a" size="17.000000 24.066509" />
     <ImageTarget name="05_r_a" size="17.000000 24.066509" />
     <ImageTarget name="02_r_a" size="17.000000 24.066509" />
@@ -17,5 +24,12 @@
     <ImageTarget name="02_r" size="17.000000 24.110804" />
     <ImageTarget name="01_r" size="17.000000 24.118994" />
     <ImageTarget name="05_r" size="17.000000 24.118994" />
+    <ImageTarget name="card_07" size="0.170000 0.241190" />
+    <ImageTarget name="card_06" size="0.170000 0.241190" />
+    <ImageTarget name="card_05" size="0.170000 0.241190" />
+    <ImageTarget name="card_04" size="0.170000 0.241190" />
+    <ImageTarget name="card_03" size="0.170000 0.241190" />
+    <ImageTarget name="card_02" size="0.170000 0.241190" />
+    <ImageTarget name="card_01" size="0.170000 0.241190" />
   </Tracking>
 </QCARConfig>

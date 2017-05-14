@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a50351e717133646be8462ea15fcc11, type: 3}
+  m_Name: LocalizationData
+  m_EditorClassIdentifier: 
+  Dictionary:
+  - Key: 1_HowWork_Label
+    Elements:
+    - Language: 30
+      Data: "\u041F\u043E\u043B\u043E\u0436\u0438\u0442\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u043A\u0443\\n\u043D\u0430
+        \u0441\u0442\u043E\u043B"
+    - Language: 10
+      Data: Place the AR-card\non the table
+    - Language: 15
+      Data: 'Legen Sie die Postkarte\nauf den Tisch '
+  - Key: 1_HowWork_Button
+    Elements:
+    - Language: 30
+      Data: "\u041F\u043E\u043B\u043E\u0436\u0438\u043B!"
+    - Language: 10
+      Data: Done!
+    - Language: 15
+      Data: Erledigt!
+  - Key: 2_HowWork_Label
+    Elements:
+    - Language: 30
+      Data: "\u041D\u0430\u0432\u0435\u0434\u0438\u0442\u0435 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\\n\u043D\u0430
+        \u043E\u0442\u043A\u0440\u044B\u0442\u043A\u0443"
+    - Language: 10
+      Data: 'Aim your smartphone\nat the AR-Card '
+    - Language: 15
+      Data: Halten Sie das Smartphone\nauf die Postkarte
+  - Key: 2_HowWork_Button
+    Elements:
+    - Language: 30
+      Data: "\u0425\u043E\u0440\u043E\u0448\u043E!"
+    - Language: 10
+      Data: Okay!
+    - Language: 15
+      Data: Fertig!
+  - Key: 3_HowWork_Label
+    Elements:
+    - Language: 30
+      Data: "\u0427\u0443\u0434\u043E \u043D\u0430 \u0432\u0430\u0448\u0438\u0445
+        \u0433\u043B\u0430\u0437\u0430\u0445"
+    - Language: 10
+      Data: A miracle in front of you
+    - Language: 15
+      Data: Ein Wunder geschieht vor Ihren Augen
+  - Key: 3_HowWork_Button
+    Elements:
+    - Language: 30
+      Data: "\u0412\u0430\u0443! \u041F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C"
+    - Language: 10
+      Data: Wow! Try it
+    - Language: 15
+      Data: Wow! Ausprobieren
+  - Key: 4_Help
+    Elements:
+    - Language: 30
+      Data: "\u0421\u0432\u043E\u0431\u043E\u0434\u043D\u043E \u0432\u0440\u0430\u0449\u0430\u0439\u0442\u0435\\n3D-\u043E\u0431\u044A\u0435\u043A\u0442"
+    - Language: 10
+      Data: 'Rotate the 3-D object\nfreely '
+    - Language: 15
+      Data: 'Drehen Sie das 3D-Objekt in\nbeliebiger Richtung '
+  - Key: 5_Help
+    Elements:
+    - Language: 30
+      Data: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435, \u0447\u0442\u043E\u0431\u044B\\n\u0441\u0434\u0435\u043B\u0430\u0442\u044C
+        \u0441\u043D\u0438\u043C\u043E\u043A\\n\u044D\u043A\u0440\u0430\u043D\u0430"
+    - Language: 10
+      Data: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435, \u0447\u0442\u043E\u0431\u044B\\n\u0441\u0434\u0435\u043B\u0430\u0442\u044C
+        \u0441\u043D\u0438\u043C\u043E\u043A\\n\u044D\u043A\u0440\u0430\u043D\u0430"
+    - Language: 15
+      Data: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435, \u0447\u0442\u043E\u0431\u044B\\n\u0441\u0434\u0435\u043B\u0430\u0442\u044C
+        \u0441\u043D\u0438\u043C\u043E\u043A\\n\u044D\u043A\u0440\u0430\u043D\u0430"
+  - Key: 6_Help
+    Elements:
+    - Language: 30
+      Data: "\u041F\u0440\u0438\u0431\u043B\u0438\u0436\u0430\u0439\u0442\u0435\\n\u0438\u043B\u0438
+        \u043E\u0442\u0434\u0430\u043B\u044F\u0439\u0442\u0435\\n3D-\u043E\u0431\u044A\u0435\u043A\u0442"
+    - Language: 10
+      Data: Zoom the 3-D\nobject or distance it
+    - Language: 15
+      Data: "N\xE4hern Sie das 3D-Objekt an\\noder schieben\\nSie es weg"
+  - Key: 7_Help
+    Elements:
+    - Language: 30
+      Data: "\u041F\u043E\u0432\u0442\u043E\u0440\u044F\u0439 \u0430\u043D\u0438\u043C\u0430\u0446\u0438\u044E\\n\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+        \u0437\u0430\u0445\u043E\u0447\u0435\u0448\u044C"
+    - Language: 10
+      Data: Repeat the animation\nas many times as you wish
+    - Language: 15
+      Data: Wiederhole die Animation\nsooft du willst
+  - Key: 8_Help_Link
+    Elements:
+    - Language: 30
+      Data: "\u0421\u043A\u0430\u0447\u0430\u0439\u0442\u0435 \u043C\u0430\u0440\u043A\u0435\u0440\u044B"
+    - Language: 10
+      Data: Download the marker images
+    - Language: 15
+      Data: Laden Sie die Lesezeichen herunter
+  - Key: Loading
+    Elements:
+    - Language: 30
+      Data: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
+    - Language: 10
+      Data: Loading
+    - Language: 15
+      Data: Laden
+  LanguageForTest: 10

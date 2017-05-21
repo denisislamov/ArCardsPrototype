@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
+using UnityEngine;
 
 public class MainUiController : MonoBehaviour
 {
@@ -13,6 +13,10 @@ public class MainUiController : MonoBehaviour
     [SerializeField] private int _lastIndexToSkip  = 6;
     private int _isFirstTimeRun   = 1;
 
+    [Space(10)]
+    public Action OnShowMenu;
+    public Action OnHideMenu;
+
     protected void Awake()
     {
         _isFirstTimeRun = PlayerPrefs.GetInt("IsFirstTimeRun", 1);
@@ -25,18 +29,29 @@ public class MainUiController : MonoBehaviour
 
         if (UIElements.Length <= _lastIndexToSkip)
         {
-            Debug.LogErrorFormat("Array UIElements has {0} elements and _lastIndexToSkip has {1}", UIElements.Length, _lastIndexToSkip);
+            Debug.LogErrorFormat("Array UIElements has {0} elements and _lastIndexToSkip has {1}",
+                                 UIElements.Length, _lastIndexToSkip);
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (OnShowMenu != null)
+        {
+            OnShowMenu();
         }
     }
 
     protected void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!Input.GetKeyDown(KeyCode.Escape))
         {
-            if (_currentScreen != UIElements.Length - 1)
-            {
-                GoToPrevScreen();
-            }
+            return;
+        }
+
+        if (_currentScreen != UIElements.Length - 1)
+        {
+            GoToPrevScreen();
         }
     }
 
@@ -56,6 +71,13 @@ public class MainUiController : MonoBehaviour
         if (_currentScreen < UIElements.Length)
         {
             UIElements[_currentScreen].SetActive(true);
+        }
+        else
+        {
+            if (OnHideMenu != null)
+            {
+                OnHideMenu();
+            }
         }
     }
 

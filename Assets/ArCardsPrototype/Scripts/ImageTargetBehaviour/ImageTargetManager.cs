@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// TODO - test this
 public class ImageTargetManager : MonoBehaviour
 {
     [SerializeField] protected CustomTrackableEventHandler[] TrackableEventHandlers;
@@ -8,9 +9,31 @@ public class ImageTargetManager : MonoBehaviour
     [Space(5)]
     [SerializeField] protected UiTransformController UiTransformControllerRef;
     [SerializeField] protected UiAnimationController UiAnimationControllerRef;
-    
-    protected void OnEnable()
+
+    [Space(10)]
+    [SerializeField] protected MainUiController MainUiControllerRef;
+
+    public void TurnOnAllTrackableEventHandlers()
     {
+        foreach (var trackableEventHandler in TrackableEventHandlers)
+        {
+            trackableEventHandler.gameObject.SetActive(true);
+        }
+    }
+
+    public void TurnOffAllTrackableEventHandlers()
+    {
+        foreach (var trackableEventHandler in TrackableEventHandlers)
+        {
+            trackableEventHandler.gameObject.SetActive(false);
+        }
+    }
+
+    protected void Awake()
+    {
+        MainUiControllerRef.OnHideMenu += TurnOffAllTrackableEventHandlers;
+        MainUiControllerRef.OnShowMenu += TurnOnAllTrackableEventHandlers;
+
         foreach (var trackableEventHandler in TrackableEventHandlers)
         {
             trackableEventHandler.OnTrackingFound += TrackingFound;
@@ -18,13 +41,16 @@ public class ImageTargetManager : MonoBehaviour
         }
     }
 
-    protected void OnDisable()
+    protected void OnDestroy()
     {
         foreach (var trackableEventHandler in TrackableEventHandlers)
         {
             trackableEventHandler.OnTrackingFound -= TrackingFound;
             trackableEventHandler.OnTrackingLost -= TrackingLost;
         }
+
+        MainUiControllerRef.OnHideMenu -= TurnOffAllTrackableEventHandlers;
+        MainUiControllerRef.OnShowMenu -= TurnOnAllTrackableEventHandlers;
     }
 
     public void TrackingFound(Transform transformRef, GameObject animatorsParent, PlaySound playSoundRef, bool isRequiredReset)

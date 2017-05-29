@@ -10,8 +10,12 @@ public class CatsSwitcher : MonoBehaviour
     {
         ObjectList[_index].gameObject.SetActive(false);
         _index++;
-        _index = _index % ObjectList.Length;
-        ObjectList[_index].gameObject.SetActive(false);
+        if (_index >= ObjectList.Length)
+        {
+            _index = 0;
+        }
+
+        ObjectList[_index].gameObject.SetActive(true);
     }
 
     public void Prev()
@@ -22,6 +26,6 @@ public class CatsSwitcher : MonoBehaviour
         {
             _index = ObjectList.Length - 1;
         }
-        ObjectList[_index].gameObject.SetActive(false);
+        ObjectList[_index].gameObject.SetActive(true);
     }
 }

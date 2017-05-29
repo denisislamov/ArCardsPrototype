@@ -16,6 +16,11 @@ public class AnimationByTap : MonoBehaviour
 
     protected void Awake()
     {
+        if (CustomTrackableEventHandlerRef == null)
+        {
+            return;
+        }
+
         CustomTrackableEventHandlerRef.OnTrackingFoundSimple += SubscribeEvent;
         CustomTrackableEventHandlerRef.OnTrackingLostSimple += UnsubscribeEvent;
     }
@@ -23,6 +28,14 @@ public class AnimationByTap : MonoBehaviour
     protected void SubscribeEvent()
     {
        EasyTouch.On_SimpleTap += OnSimpleTap;
+    }
+
+    protected void OnEnable()
+    {
+        if (CustomTrackableEventHandlerRef == null)
+        {
+            SubscribeEvent();
+        }
     }
 
     protected void OnDisable()
@@ -34,6 +47,11 @@ public class AnimationByTap : MonoBehaviour
     {
         UnsubscribeEvent();
 
+        if (CustomTrackableEventHandlerRef == null)
+        {
+            return;
+        }
+        
         CustomTrackableEventHandlerRef.OnTrackingFoundSimple -= SubscribeEvent;
         CustomTrackableEventHandlerRef.OnTrackingLostSimple -= UnsubscribeEvent;
     }

@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/ArCardsPrototype/Scenes/Main_1.unity
   - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/Joystick-Event-Input.unity
+  - enabled: 0
+    path: Assets/ArCardsPrototype/Scenes/Main_2.unity

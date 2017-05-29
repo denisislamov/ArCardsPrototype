@@ -16,7 +16,10 @@ public class CaptureScreenshot : MonoBehaviour
 
     [SerializeField] protected AudioSource SnapAudioSource;
     [SerializeField] protected GameObject Splash;
-
+    
+    [SerializeField] protected GameObject[] EnabledGameObjects;
+    [SerializeField] protected GameObject[] DisabledGameObjects;
+    
 #if UNITY_IPHONE
     [DllImport("__Internal")]
     private static extern bool saveToGallery(string path);
@@ -56,6 +59,17 @@ public class CaptureScreenshot : MonoBehaviour
         Splash.SetActive(true);
         yield return new WaitForSeconds(.2f);
         Splash.SetActive(false);
+        
+
+        foreach (var enabledGameObject in EnabledGameObjects)
+        {
+            enabledGameObject.gameObject.SetActive(true);
+        }
+        
+        foreach (var disabledGameObject in DisabledGameObjects)
+        {
+            disabledGameObject.gameObject.SetActive(false);
+        }
 
         Application.CaptureScreenshot(androidPath);
         var obj = new AndroidJavaClass("com.ryanwebb.androidscreenshot.MainActivity");
@@ -66,8 +80,17 @@ public class CaptureScreenshot : MonoBehaviour
 
             yield return new WaitForSeconds(.5f);
         }
-#endif
 
+        foreach (var enabledGameObject in EnabledGameObjects)
+        {
+            enabledGameObject.gameObject.SetActive(false);
+        }
+        
+        foreach (var disabledGameObject in DisabledGameObjects)
+        {
+            disabledGameObject.gameObject.SetActive(true);
+        }
+#endif
         // IOS
 #if UNITY_IPHONE
         string iosPath = Application.persistentDataPath + "/" + screenshotFilename;
@@ -76,6 +99,16 @@ public class CaptureScreenshot : MonoBehaviour
         Splash.SetActive(true);
         yield return new WaitForSeconds(.2f);
         Splash.SetActive(false);
+        
+        foreach (var enabledGameObject in EnabledGameObjects)
+        {
+            enabledGameObject.gameObjects.SetActive(true);
+        }
+        
+        foreach (var disabledGameObjects in DisabledGameObjects)
+        {
+            disabledGameObject.gameObjects.SetActive(false);
+        }
 
         Application.CaptureScreenshot(screenshotFilename);
 
@@ -86,6 +119,16 @@ public class CaptureScreenshot : MonoBehaviour
         }
 
         UnityEngine.iOS.Device.SetNoBackupFlag(iosPath);
+
+        foreach (var enabledGameObject in EnabledGameObjects)
+        {
+            enabledGameObject.gameObjects.SetActive(false);
+        }
+        
+        foreach (var disabledGameObject in DisabledGameObjects)
+        {
+            disabledGameObject.gameObjects.SetActive(true);
+        }
 #endif
 
         Debug.Log("TakeImage Done");

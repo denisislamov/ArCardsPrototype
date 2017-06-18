@@ -55,7 +55,7 @@ public class MainUiController : MonoBehaviour
         }
     }
 
-    private void GoToNextScreen()
+    public void GoToNextScreen()
     {
         UIElements[_currentScreen].SetActive(false);
         _currentScreen++;
@@ -81,7 +81,7 @@ public class MainUiController : MonoBehaviour
         }
     }
 
-    private void GoToPrevScreen()
+    public void GoToPrevScreen()
     {
         if (_currentScreen == 0)
         {

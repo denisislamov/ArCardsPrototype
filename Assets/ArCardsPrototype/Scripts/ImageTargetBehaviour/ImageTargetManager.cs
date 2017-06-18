@@ -13,6 +13,8 @@ public class ImageTargetManager : MonoBehaviour
     [Space(10)]
     [SerializeField] protected MainUiController MainUiControllerRef;
 
+    [SerializeField] private Timer _timer;
+    
     public void TurnOnAllTrackableEventHandlers()
     {
         foreach (var trackableEventHandler in TrackableEventHandlers)
@@ -55,6 +57,9 @@ public class ImageTargetManager : MonoBehaviour
 
     public void TrackingFound(Transform transformRef, GameObject animatorsParent, PlaySound playSoundRef, bool isRequiredReset)
     {
+        _timer.StopTimer();
+        _timer.gameObject.SetActive(false);
+        
         UiTransformControllerRef.TargetTransform = transformRef;
         UiAnimationControllerRef.AnimatorsParent = animatorsParent;
 

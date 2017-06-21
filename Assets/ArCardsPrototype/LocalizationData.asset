@@ -114,4 +114,13 @@ MonoBehaviour:
       Data: Loading
     - Language: 15
       Data: Laden
+  - Key: 9_Shop_Link
+    Elements:
+    - Language: 30
+      Data: "\u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043A\u0443\u043F\u0438\u0442\u044C\\n\u043E\u0442\u043A\u0440\u044B\u0442\u043A\u0438
+        \u043D\u0430 \u0441\u0430\u0439\u0442\u0435:\\nwww.arkrytki.ru"
+    - Language: 10
+      Data: All AR Greeting\npostcards here:\nwww.arkrytki.ru
+    - Language: 15
+      Data: "Alle AR Gru\xDFkarten hier:\\nwww.arkrytki.ru"
   LanguageForTest: 10

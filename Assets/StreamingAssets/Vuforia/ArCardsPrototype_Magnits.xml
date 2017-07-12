@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="magnit_kazan_3" size="24.118990 32.814690" />
+    <ImageTarget name="magnit_kazan_2" size="24.118990 32.814690" />
+    <ImageTarget name="magnit_kazan_1" size="24.118990 35.065304" />
+    <ImageTarget name="magnit_kazan" size="24.118990 35.065304" />
+    <ImageTarget name="magnit_cvety_1" size="24.118990 35.065304" />
+    <ImageTarget name="magnit_cvety" size="24.118990 35.065304" />
+    <ImageTarget name="magnit_bear" size="24.118990 35.065304" />
+    <ImageTarget name="magnit_ballons" size="24.118990 16.589781" />
+  </Tracking>
+</QCARConfig>

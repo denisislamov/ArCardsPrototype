@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     
     public void StartTimer()
     {
-        if (_coroutine != null && !gameObject.activeSelf)
+        if (_coroutine != null || !gameObject.activeSelf)
         {
             return;
         }

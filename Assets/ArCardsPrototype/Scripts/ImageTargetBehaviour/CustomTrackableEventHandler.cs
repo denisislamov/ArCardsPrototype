@@ -1,78 +1,95 @@
 ﻿using UnityEngine;
 using Vuforia;
 using System;
+using System.Collections;
 
-// TODO - проверить новые механики
 public class CustomTrackableEventHandler : MonoBehaviour,
                                            ITrackableEventHandler
 {
     private TrackableBehaviour _trackableBehaviour;
-
-    [SerializeField] protected Transform MainControllerTransform;
-    [SerializeField] protected GameObject TargetAnimatorsParent;
-    [SerializeField] protected PlaySound PlaySoundRef;
-
+    
+    public Transform MainControllerTransform;
+    public GameObject TargetAnimatorsParent;
+    public PlaySound PlaySoundRef;
+    public LanguageDepencePlaySound LanguageDepencePlaySoundValue;
+    public AudioClip MusicAudioClip;
+    
+    [Space(10)]
     public Action OnTrackingFoundSimple;
-    public Action<Transform, GameObject, PlaySound, bool> OnTrackingFound;
+    public Action<CustomTrackableEventHandler> OnTrackingFound;
 
     public Action OnTrackingLostSimple;
     public Action<PlaySound> OnTrackingLost;
-
+    
+    [Space(10)]
+    public bool ShowTranslationUi;
     private bool _isTrackingFound;
 
     public bool GetIsTrackingFound()
     {
         return _isTrackingFound;
     }
-
+    
+    [Space(10)]
     [SerializeField] protected float Delay = 5.0f;
     private float _elapsedTime = 0.0f;
-    private bool _isRequiredReset;
+    
+    [HideInInspector]
+    public bool IsRequiredReset;
 
+    [Space(10)]
     public GameObject[] RandomElements;
-
-    protected void Start()
+    private void Start()
     {
         _trackableBehaviour = GetComponent<TrackableBehaviour>();
+
         if (_trackableBehaviour)
         {
             _trackableBehaviour.RegisterTrackableEventHandler(this);
         }
-
-        if (RandomElements.Length > 0)
+        
+        if (RandomElements.Length <= 0)
         {
-            foreach (var re in RandomElements)
-            {
-                re.SetActive(false);
-            }
+            return;
+        }
+
+        for (var index = 0; index < RandomElements.Length; index++)
+        {
+            var re = RandomElements[index];
+            re.SetActive(false);
         }
     }
 
-    protected void Update()
+    private  void Update()
     {
-        if (!_isRequiredReset && !_isTrackingFound)
+        if (IsRequiredReset || _isTrackingFound)
         {
-            _elapsedTime += Time.deltaTime;
-
-            if (_elapsedTime > Delay)
-            {
-                _elapsedTime = 0.0f;
-                _isRequiredReset = true;
-
-                if (RandomElements.Length > 0)
-                {
-                    foreach (var re in RandomElements)
-                    {
-                        re.SetActive(false);
-                    }
-                }
-            }
+            return;
         }
+        _elapsedTime += Time.deltaTime;
+
+        if (_elapsedTime <= Delay)
+        {
+            return;
+        }
+        _elapsedTime = 0.0f;
+        IsRequiredReset = true;
+
+        if (RandomElements.Length <= 0)
+        {
+            return;
+        }
+        
+        foreach (var re in RandomElements)
+        {
+            re.SetActive(false);
+        }
+
+        TrackingLost();
     }
 
 
-    public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus,
-                                        TrackableBehaviour.Status newStatus)
+    public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED  ||
@@ -86,9 +103,9 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         }
     }
 
-    private void TrackingFound()
+    protected virtual void TrackingFound()
     {
-        if (RandomElements.Length > 0 && _isRequiredReset)
+        if (RandomElements.Length > 0 && IsRequiredReset)
         {
             var go = RandomElements[UnityEngine.Random.Range(0, RandomElements.Length)];
             go.SetActive(true);
@@ -98,11 +115,11 @@ public class CustomTrackableEventHandler : MonoBehaviour,
             PlaySoundRef = go.GetComponentInChildren<PlaySound>();
         }
 
-        Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-        //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+        var rendererComponents = GetComponentsInChildren<Renderer>(true);
 
-        foreach (Renderer component in rendererComponents)
+        for (var index = 0; index < rendererComponents.Length; index++)
         {
+            var component = rendererComponents[index];
             if (component.gameObject.GetComponent<TouchFingerQuad>() != null)
             {
                 component.material.SetFloat("_ScaleX", 3.0f);
@@ -113,11 +130,13 @@ public class CustomTrackableEventHandler : MonoBehaviour,
                 component.enabled = true;
             }
         }
-
-        //foreach (Collider component in colliderComponents)
-        //{
-        //    component.enabled = true;
-        //}
+        
+        var animators = GetComponentsInChildren<Animator>(true);
+        for (var index = 0; index < animators.Length; index++)
+        {
+            var animator = animators[index];
+            animator.speed = 1.0f;
+        }
 
         if (OnTrackingFoundSimple != null)
         {
@@ -126,23 +145,23 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         
         if (OnTrackingFound != null)
         {
-            OnTrackingFound(MainControllerTransform, TargetAnimatorsParent, PlaySoundRef, _isRequiredReset);
-            _isRequiredReset = false;
+            OnTrackingFound(this);
+            OnTrackingFound(this);
+            IsRequiredReset = false;
         }
 
         _isTrackingFound = true;
-
-        Debug.Log("Trackable " + _trackableBehaviour.TrackableName + " found");
+        //Debug.Log("Trackable " + _trackableBehaviour.TrackableName + " found");
     }
 
 
-    private void TrackingLost()
+    protected virtual void TrackingLost()
     {
-        Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
-        //Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+        var rendererComponents = GetComponentsInChildren<Renderer>(true);
 
-        foreach (Renderer component in rendererComponents)
+        for (var index = 0; index < rendererComponents.Length; index++)
         {
+            var component = rendererComponents[index];
             if (component.gameObject.GetComponent<TouchFingerQuad>() != null)
             {
                 component.material.SetFloat("_ScaleX", 0.0f);
@@ -153,12 +172,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
                 component.enabled = false;
             }
         }
-
-        //foreach (Collider component in colliderComponents)
-        //{
-        //    component.enabled = false;
-        //}
-
+        
         if (OnTrackingLostSimple != null)
         {   
             OnTrackingLostSimple();
@@ -170,7 +184,14 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         }
 
         _isTrackingFound = false;
-
-        Debug.Log("Trackable " + _trackableBehaviour.TrackableName + " lost");
+        
+        var animators = GetComponentsInChildren<Animator>(true);
+        for (var index = 0; index < animators.Length; index++)
+        {
+            var animator = animators[index];
+            animator.speed = 0.0f;
+        }
+        
+        //Debug.Log("Trackable " + _trackableBehaviour.TrackableName + " lost");
     }
 }

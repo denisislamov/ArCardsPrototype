@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class MainUiController : MonoBehaviour
@@ -34,14 +35,6 @@ public class MainUiController : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        if (OnShowMenu != null)
-        {
-            OnShowMenu();
-        }
-    }
-
     protected void Update()
     {
         if (!Input.GetKeyDown(KeyCode.Escape))
@@ -59,7 +52,15 @@ public class MainUiController : MonoBehaviour
     {
         UIElements[_currentScreen].SetActive(false);
         _currentScreen++;
-
+        
+        if (_currentScreen >= UIElements.Length - 1)
+        {
+            if (OnHideMenu != null)
+            {
+                OnHideMenu.Invoke();
+            }
+        }
+        
         if (_isFirstTimeRun == 0)
         {
             if (_currentScreen == _firstIndexToSkip)
@@ -71,13 +72,6 @@ public class MainUiController : MonoBehaviour
         if (_currentScreen < UIElements.Length)
         {
             UIElements[_currentScreen].SetActive(true);
-        }
-        else
-        {
-            if (OnHideMenu != null)
-            {
-                OnHideMenu();
-            }
         }
     }
 

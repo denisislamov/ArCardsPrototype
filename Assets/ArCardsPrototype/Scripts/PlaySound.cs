@@ -7,9 +7,9 @@ public class PlaySound : MonoBehaviour
     [Space(10)]
     [SerializeField] protected AudioSource AudioSourceRef;
     [SerializeField] protected AudioSource BackgroundMusicAudioSourceRef;
-
+    [SerializeField] private float _musicVolumeFactor = 0.5f;
+    
     private float _defaultBackgroundVolume;
-
     private bool _isPaused;
 
     protected void Awake()
@@ -29,7 +29,7 @@ public class PlaySound : MonoBehaviour
 
         if (BackgroundMusicAudioSourceRef != null)
         {
-            BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume/2;
+            BackgroundMusicAudioSourceRef.volume = _defaultBackgroundVolume * _musicVolumeFactor;
         }
 
         _isPaused = false;

@@ -11,6 +11,10 @@ public class DisableActionByTap : StateMachineBehaviour
             collider.enabled = false;
         }
 
-        animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject.GetComponent<Renderer>().enabled = false;
+        var touchFingerQuadGameObject = animator.gameObject.GetComponentInChildren<TouchFingerQuad>().gameObject;
+        if (touchFingerQuadGameObject)
+        {
+            touchFingerQuadGameObject.GetComponent<Renderer>().enabled = false;
+        }
     }
 }

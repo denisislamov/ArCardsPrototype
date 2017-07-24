@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-// TODO - test this
 public class ImageTargetManager : MonoBehaviour
 {
     [SerializeField] protected CustomTrackableEventHandler[] TrackableEventHandlers;
@@ -10,37 +8,30 @@ public class ImageTargetManager : MonoBehaviour
     [SerializeField] protected UiTransformController UiTransformControllerRef;
     [SerializeField] protected UiAnimationController UiAnimationControllerRef;
 
+    private LanguageDepencePlaySound _languageDepencePlaySoundValue;
+    
     [Space(10)]
     [SerializeField] protected MainUiController MainUiControllerRef;
 
-    [SerializeField] private Timer _timer;
+    [Space(10)] 
+    [SerializeField] protected AudioSource MusicSource;
+    [SerializeField] protected AudioClip DefaultAudioClip;
     
-    public void TurnOnAllTrackableEventHandlers()
-    {
-        foreach (var trackableEventHandler in TrackableEventHandlers)
-        {
-            trackableEventHandler.gameObject.SetActive(true);
-        }
-    }
+    [Space(10)]
+    [SerializeField] private Timer _timer;
 
-    public void TurnOffAllTrackableEventHandlers()
-    {
-        foreach (var trackableEventHandler in TrackableEventHandlers)
-        {
-            trackableEventHandler.gameObject.SetActive(false);
-        }
-    }
+    [Space(10)] 
+    [SerializeField] private GameObject _translationUi;
+    
 
     protected void Awake()
     {
-        MainUiControllerRef.OnHideMenu += TurnOffAllTrackableEventHandlers;
-        MainUiControllerRef.OnShowMenu += TurnOnAllTrackableEventHandlers;
-
         foreach (var trackableEventHandler in TrackableEventHandlers)
         {
             trackableEventHandler.OnTrackingFound += TrackingFound;
             trackableEventHandler.OnTrackingLost += TrackingLost;
         }
+
     }
 
     protected void OnDestroy()
@@ -50,25 +41,31 @@ public class ImageTargetManager : MonoBehaviour
             trackableEventHandler.OnTrackingFound -= TrackingFound;
             trackableEventHandler.OnTrackingLost -= TrackingLost;
         }
-
-        MainUiControllerRef.OnHideMenu -= TurnOffAllTrackableEventHandlers;
-        MainUiControllerRef.OnShowMenu -= TurnOnAllTrackableEventHandlers;
     }
 
-    public void TrackingFound(Transform transformRef, GameObject animatorsParent, PlaySound playSoundRef, bool isRequiredReset)
+    public void TrackingFound(CustomTrackableEventHandler value)
     {
         _timer.StopTimer();
         _timer.gameObject.SetActive(false);
         
-        UiTransformControllerRef.TargetTransform = transformRef;
-        UiAnimationControllerRef.AnimatorsParent = animatorsParent;
-
-        if (playSoundRef != null)
+        UiTransformControllerRef.TargetTransform = value.MainControllerTransform;
+        UiAnimationControllerRef.AnimatorsParent = value.TargetAnimatorsParent;
+        _languageDepencePlaySoundValue = value.LanguageDepencePlaySoundValue;
+         
+        if (value.PlaySoundRef != null)
         {
-            playSoundRef.Resume();
+            value.PlaySoundRef.Resume();
+        }
+        
+        _translationUi.SetActive(value.ShowTranslationUi);
+
+        if (value.MusicAudioClip != null)
+        {
+            MusicSource.clip = value.MusicAudioClip;
+            MusicSource.Play();
         }
 
-        if (!isRequiredReset)
+        if (!value.IsRequiredReset)
         {
             return;
         }
@@ -82,9 +79,34 @@ public class ImageTargetManager : MonoBehaviour
         UiTransformControllerRef.TargetTransform = null;
         UiAnimationControllerRef.AnimatorsParent = null;
 
+        if (_languageDepencePlaySoundValue != null)
+        {
+            _languageDepencePlaySoundValue.ResetLanguage();
+            _languageDepencePlaySoundValue = null;
+        }
+        
+        _translationUi.SetActive(false);
+
+        if (MusicSource.clip != DefaultAudioClip)
+        {
+            MusicSource.clip = DefaultAudioClip;
+            MusicSource.Play();
+        }
+
         if (playSoundRef != null)
         {
             playSoundRef.Pause();
         }
+    }
+
+    public void PlayRequiredLanguage(int index)
+    {
+        if (_languageDepencePlaySoundValue == null)
+        {
+            return;
+        }
+        
+        _languageDepencePlaySoundValue.SetLanguage(index);
+        UiAnimationControllerRef.Reset();
     }
 }

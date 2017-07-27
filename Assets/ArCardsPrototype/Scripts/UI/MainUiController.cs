@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using Vuforia;
 
 public class MainUiController : MonoBehaviour
 {
@@ -35,6 +36,11 @@ public class MainUiController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+    }
+
     protected void Update()
     {
         if (!Input.GetKeyDown(KeyCode.Escape))
@@ -59,6 +65,7 @@ public class MainUiController : MonoBehaviour
             {
                 OnHideMenu.Invoke();
             }
+            TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
         }
         
         if (_isFirstTimeRun == 0)

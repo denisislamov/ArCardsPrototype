@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using UnityEngine;
 using Vuforia;
 
@@ -38,7 +37,14 @@ public class MainUiController : MonoBehaviour
 
     private void Start()
     {
+        VuforiaBehaviour.Instance.RegisterVuforiaStartedCallback(LoadDataSet);
+      
+    }
+
+    private static void LoadDataSet()
+    {
         TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        Debug.Log("TrackerManager.Instance.GetTracker<ObjectTracker>().Stop()");
     }
 
     protected void Update()
@@ -66,6 +72,7 @@ public class MainUiController : MonoBehaviour
                 OnHideMenu.Invoke();
             }
             TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
+            Debug.Log("TrackerManager.Instance.GetTracker<ObjectTracker>().Start()");
         }
         
         if (_isFirstTimeRun == 0)

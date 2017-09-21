@@ -123,4 +123,12 @@ MonoBehaviour:
       Data: All AR Greeting\npostcards here:\nwww.arkrytki.ru
     - Language: 15
       Data: "Alle AR Gru\xDFkarten hier:\\nwww.arkrytki.ru"
+  - Key: ShopClose
+    Elements:
+    - Language: 30
+      Data: "\u0417\u0430\u043A\u0440\u044B\u0442\u044C"
+    - Language: 10
+      Data: Close
+    - Language: 15
+      Data: "Schlie\xDFen"
   LanguageForTest: 10

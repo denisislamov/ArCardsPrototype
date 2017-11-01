@@ -173,7 +173,7 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: H:/Users/Disa/Documents/Keystores/ArCardsPrototype/user.keystore
+  AndroidKeystoreName: H:/Users/Disa/OneDrive/Keystores/ArCardsPrototype/user.keystore
   AndroidKeyaliasName: arcardsprototype
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -541,7 +541,7 @@ PlayerSettings:
   Game_Performance_ServiceEnabled::Game_Performance_ServiceEnabled: False
   Hub_ServiceEnabled::Hub_ServiceEnabled: False
   Purchasing_ServiceEnabled::Purchasing_ServiceEnabled: False
-  UNet_ServiceEnabled::UNet_ServiceEnabled: False
+  UNet_ServiceEnabled::UNet_ServiceEnabled: True
   Unity_Ads_ServiceEnabled::Unity_Ads_ServiceEnabled: False
   WebGL::emscriptenArgs: 
   WebGL::template: APPLICATION:Default
@@ -584,7 +584,7 @@ PlayerSettings:
   XboxOne::VR::enabledDevices: []
   iOS::VR::enabledDevices: []
   tvOS::VR::enabledDevices: []
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: c3032c58-29b3-4db3-b84f-b79dbe689fe9
+  projectName: "Ar\u041A\u0440\u044B\u0442\u043A\u0430"
+  organizationId: disadisa
   cloudEnabled: 0

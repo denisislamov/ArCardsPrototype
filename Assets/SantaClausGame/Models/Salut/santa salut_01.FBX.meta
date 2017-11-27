@@ -1,0 +1,581 @@
+fileFormatVersion: 2
+guid: 923eb0f5dd931704d86d5fc2a1421ac1
+timeCreated: 1511524403
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: All
+    100002: arvores2
+    100004: Bag_011
+    100006: Belly
+    100008: Belly_Top
+    100010: Box_004
+    100012: Box_005
+    100014: Box_006
+    100016: Box_007
+    100018: Box_008
+    100020: Candle_003
+    100022: Candle_004
+    100024: Candle_1
+    100026: Candle_2
+    100028: Candy
+    100030: Candy001
+    100032: Candy002
+    100034: Chest
+    100036: Fireplace
+    100038: Group002
+    100040: Group003
+    100042: Hat_01
+    100044: Hat_01_2
+    100046: Hat_02
+    100048: Hat_03
+    100050: Hat_04
+    100052: Hat_05
+    100054: Hat_06
+    100056: Head
+    100058: HeadAdj
+    100060: HeadTop
+    100062: HeadTop_End
+    100064: Hips
+    100066: Hlopuhka
+    100068: LeftArm
+    100070: LeftFoot
+    100072: LeftForeArm
+    100074: LeftHand
+    100076: LeftHandAdj
+    100078: LeftHandIndex13
+    100080: LeftHandIndex17
+    100082: LeftHandMiddle1
+    100084: LeftHandMiddle13
+    100086: LeftHandMiddle17
+    100088: LeftHandMiddle2
+    100090: LeftHandMiddle3
+    100092: LeftHandPinky13
+    100094: LeftHandPinky17
+    100096: LeftHandRing13
+    100098: LeftHandRing17
+    100100: LeftHandThumb1
+    100102: LeftHandThumb13
+    100104: LeftHandThumb17
+    100106: LeftHandThumb2
+    100108: LeftHandThumb3
+    100110: LeftLeg
+    100112: LeftShoulder
+    100114: LeftToes
+    100116: LeftTop
+    100118: LeftUpLeg
+    100120: Line658
+    100122: LToeBase_End2
+    100124: LToeBase_End3
+    100126: Neck
+    100128: Object
+    100130: Particle View 01
+    100132: Pine_tree
+    100134: povorot taliaya
+    100136: Rack
+    100138: Reference
+    100140: RightArm
+    100142: RightFoot
+    100144: RightForeArm
+    100146: RightHand
+    100148: RightHandAdj
+    100150: RightHandMiddle1
+    100152: RightHandMiddle13
+    100154: RightHandMiddle2
+    100156: RightHandThumb1
+    100158: RightHandThumb2
+    100160: RightHandThumb3
+    100162: RightLeg
+    100164: RightShoulder
+    100166: RightToes
+    100168: RightTop
+    100170: RightUpLeg
+    100172: //RootNode
+    100174: Santa_01
+    100176: Sock_003
+    100178: Sock_004
+    100180: Sock_1
+    100182: Sock_2
+    100184: Spine
+    100186: SpineAdj
+    100188: Star
+    100190: svecha001
+    100192: Time Lord Staff
+    100194: Ukrasheniya Elka
+    400000: All
+    400002: arvores2
+    400004: Bag_011
+    400006: Belly
+    400008: Belly_Top
+    400010: Box_004
+    400012: Box_005
+    400014: Box_006
+    400016: Box_007
+    400018: Box_008
+    400020: Candle_003
+    400022: Candle_004
+    400024: Candle_1
+    400026: Candle_2
+    400028: Candy
+    400030: Candy001
+    400032: Candy002
+    400034: Chest
+    400036: Fireplace
+    400038: Group002
+    400040: Group003
+    400042: Hat_01
+    400044: Hat_01_2
+    400046: Hat_02
+    400048: Hat_03
+    400050: Hat_04
+    400052: Hat_05
+    400054: Hat_06
+    400056: Head
+    400058: HeadAdj
+    400060: HeadTop
+    400062: HeadTop_End
+    400064: Hips
+    400066: Hlopuhka
+    400068: LeftArm
+    400070: LeftFoot
+    400072: LeftForeArm
+    400074: LeftHand
+    400076: LeftHandAdj
+    400078: LeftHandIndex13
+    400080: LeftHandIndex17
+    400082: LeftHandMiddle1
+    400084: LeftHandMiddle13
+    400086: LeftHandMiddle17
+    400088: LeftHandMiddle2
+    400090: LeftHandMiddle3
+    400092: LeftHandPinky13
+    400094: LeftHandPinky17
+    400096: LeftHandRing13
+    400098: LeftHandRing17
+    400100: LeftHandThumb1
+    400102: LeftHandThumb13
+    400104: LeftHandThumb17
+    400106: LeftHandThumb2
+    400108: LeftHandThumb3
+    400110: LeftLeg
+    400112: LeftShoulder
+    400114: LeftToes
+    400116: LeftTop
+    400118: LeftUpLeg
+    400120: Line658
+    400122: LToeBase_End2
+    400124: LToeBase_End3
+    400126: Neck
+    400128: Object
+    400130: Particle View 01
+    400132: Pine_tree
+    400134: povorot taliaya
+    400136: Rack
+    400138: Reference
+    400140: RightArm
+    400142: RightFoot
+    400144: RightForeArm
+    400146: RightHand
+    400148: RightHandAdj
+    400150: RightHandMiddle1
+    400152: RightHandMiddle13
+    400154: RightHandMiddle2
+    400156: RightHandThumb1
+    400158: RightHandThumb2
+    400160: RightHandThumb3
+    400162: RightLeg
+    400164: RightShoulder
+    400166: RightToes
+    400168: RightTop
+    400170: RightUpLeg
+    400172: //RootNode
+    400174: Santa_01
+    400176: Sock_003
+    400178: Sock_004
+    400180: Sock_1
+    400182: Sock_2
+    400184: Spine
+    400186: SpineAdj
+    400188: Star
+    400190: svecha001
+    400192: Time Lord Staff
+    400194: Ukrasheniya Elka
+    2300000: Box_004
+    2300002: Box_005
+    2300004: Box_006
+    2300006: Box_007
+    2300008: Box_008
+    2300010: Candle_003
+    2300012: Candle_004
+    2300014: Candle_1
+    2300016: Candle_2
+    2300018: Candy
+    2300020: Candy001
+    2300022: Candy002
+    2300024: Fireplace
+    2300026: Hlopuhka
+    2300028: Object
+    2300030: Pine_tree
+    2300032: Rack
+    2300034: Sock_003
+    2300036: Sock_004
+    2300038: Sock_1
+    2300040: Sock_2
+    2300042: Star
+    2300044: svecha001
+    2300046: Time Lord Staff
+    2300048: Ukrasheniya Elka
+    3300000: Box_004
+    3300002: Box_005
+    3300004: Box_006
+    3300006: Box_007
+    3300008: Box_008
+    3300010: Candle_003
+    3300012: Candle_004
+    3300014: Candle_1
+    3300016: Candle_2
+    3300018: Candy
+    3300020: Candy001
+    3300022: Candy002
+    3300024: Fireplace
+    3300026: Hlopuhka
+    3300028: Object
+    3300030: Pine_tree
+    3300032: Rack
+    3300034: Sock_003
+    3300036: Sock_004
+    3300038: Sock_1
+    3300040: Sock_2
+    3300042: Star
+    3300044: svecha001
+    3300046: Time Lord Staff
+    3300048: Ukrasheniya Elka
+    4300000: Hat_01
+    4300002: Santa_01
+    4300004: Bag_011
+    4300006: Time Lord Staff
+    4300008: Box_004
+    4300010: Box_005
+    4300012: Box_006
+    4300014: Box_007
+    4300016: Box_008
+    4300018: Sock_2
+    4300020: Sock_1
+    4300022: Rack
+    4300024: Candy
+    4300026: Candle_2
+    4300028: Candle_1
+    4300030: Fireplace
+    4300032: Sock_003
+    4300034: Sock_004
+    4300036: Candy001
+    4300038: Candle_003
+    4300040: Candle_004
+    4300042: Candy002
+    4300044: Star
+    4300046: svecha001
+    4300048: Ukrasheniya Elka
+    4300050: Pine_tree
+    4300052: Hlopuhka
+    4300054: Object
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Bag_011
+    13700002: Hat_01
+    13700004: Santa_01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 1050
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: PlaySoundByDefaultLanguage
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: All
+        weight: 1
+      - path: All/Hat_01
+        weight: 1
+      - path: All/Hips
+        weight: 1
+      - path: All/Hips/LeftUpLeg
+        weight: 1
+      - path: All/Hips/LeftUpLeg/LeftLeg
+        weight: 1
+      - path: All/Hips/LeftUpLeg/LeftLeg/LeftFoot
+        weight: 1
+      - path: All/Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToes
+        weight: 1
+      - path: All/Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToes/LeftTop
+        weight: 1
+      - path: All/Hips/RightUpLeg
+        weight: 1
+      - path: All/Hips/RightUpLeg/RightLeg
+        weight: 1
+      - path: All/Hips/RightUpLeg/RightLeg/RightFoot
+        weight: 1
+      - path: All/Hips/RightUpLeg/RightLeg/RightFoot/RightToes
+        weight: 1
+      - path: All/Hips/RightUpLeg/RightLeg/RightFoot/RightToes/RightTop
+        weight: 1
+      - path: All/Hips/Santa_01
+        weight: 1
+      - path: All/povorot taliaya
+        weight: 1
+      - path: All/povorot taliaya/Spine
+        weight: 1
+      - path: All/povorot taliaya/Spine/Belly
+        weight: 1
+      - path: All/povorot taliaya/Spine/Belly/Belly_Top
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandAdj
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1/LeftHandMiddle2
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1/LeftHandThumb2
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck/Head
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck/Head/HeadTop
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02/Hat_03
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02/Hat_03/Hat_04
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02/Hat_03/Hat_04/Hat_05
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02/Hat_03/Hat_04/Hat_05/Hat_06
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/Neck/Head/HeadTop/HeadAdj
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandAdj
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1/RightHandMiddle2
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1/RightHandMiddle2/RightHandMiddle13
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1/RightHandThumb2
+        weight: 1
+      - path: All/povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3
+        weight: 1
+      - path: All/povorot taliaya/Spine/SpineAdj
+        weight: 1
+      - path: arvores2
+        weight: 1
+      - path: Bag_011
+        weight: 1
+      - path: Box_004
+        weight: 1
+      - path: Box_005
+        weight: 1
+      - path: Box_006
+        weight: 1
+      - path: Box_007
+        weight: 1
+      - path: Box_008
+        weight: 1
+      - path: Group002
+        weight: 1
+      - path: Group002/Candle_1
+        weight: 1
+      - path: Group002/Candle_2
+        weight: 1
+      - path: Group002/Candle_003
+        weight: 1
+      - path: Group002/Candle_004
+        weight: 1
+      - path: Group002/Candy
+        weight: 1
+      - path: Group002/Candy001
+        weight: 1
+      - path: Group002/Candy002
+        weight: 1
+      - path: Group002/Fireplace
+        weight: 1
+      - path: Group002/Rack
+        weight: 1
+      - path: Group002/Sock_1
+        weight: 1
+      - path: Group002/Sock_2
+        weight: 1
+      - path: Group002/Sock_003
+        weight: 1
+      - path: Group002/Sock_004
+        weight: 1
+      - path: Group003
+        weight: 1
+      - path: Group003/Hlopuhka
+        weight: 1
+      - path: Group003/Object
+        weight: 1
+      - path: HeadTop_End
+        weight: 1
+      - path: LeftHandIndex13
+        weight: 1
+      - path: LeftHandIndex17
+        weight: 1
+      - path: LeftHandMiddle13
+        weight: 1
+      - path: LeftHandMiddle17
+        weight: 1
+      - path: LeftHandPinky13
+        weight: 1
+      - path: LeftHandPinky17
+        weight: 1
+      - path: LeftHandRing13
+        weight: 1
+      - path: LeftHandRing17
+        weight: 1
+      - path: LeftHandThumb13
+        weight: 1
+      - path: LeftHandThumb17
+        weight: 1
+      - path: Line658
+        weight: 1
+      - path: LToeBase_End2
+        weight: 1
+      - path: LToeBase_End3
+        weight: 1
+      - path: Particle View 01
+        weight: 1
+      - path: Pine_tree
+        weight: 1
+      - path: Reference
+        weight: 1
+      - path: Star
+        weight: 1
+      - path: svecha001
+        weight: 1
+      - path: Time Lord Staff
+        weight: 1
+      - path: Ukrasheniya Elka
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

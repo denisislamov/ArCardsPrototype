@@ -28,6 +28,7 @@ public class LanguageDepencePlaySound : MonoBehaviour
     private void Awake()
     {
         _currentLanguage = Application.systemLanguage;
+        //_currentLanguage = SystemLanguage.English;
     }
 
     public void ResetLanguage()

@@ -22,8 +22,9 @@ public class ImageTargetManager : MonoBehaviour
 
     [Space(10)] 
     [SerializeField] private GameObject _translationUi;
-    
 
+    private CustomTrackableEventHandler _lasTrackableEventHandler;
+    
     protected void Awake()
     {
         foreach (var trackableEventHandler in TrackableEventHandlers)
@@ -31,9 +32,8 @@ public class ImageTargetManager : MonoBehaviour
             trackableEventHandler.OnTrackingFound += TrackingFound;
             trackableEventHandler.OnTrackingLost += TrackingLost;
         }
-
     }
-
+    
     protected void OnDestroy()
     {
         foreach (var trackableEventHandler in TrackableEventHandlers)
@@ -43,7 +43,7 @@ public class ImageTargetManager : MonoBehaviour
         }
     }
 
-    public void TrackingFound(CustomTrackableEventHandler value)
+    private void TrackingFound(CustomTrackableEventHandler value)
     {
         _timer.StopTimer();
         _timer.gameObject.SetActive(false);
@@ -51,11 +51,8 @@ public class ImageTargetManager : MonoBehaviour
         UiTransformControllerRef.TargetTransform = value.MainControllerTransform;
         UiAnimationControllerRef.AnimatorsParent = value.TargetAnimatorsParent;
         _languageDepencePlaySoundValue = value.LanguageDepencePlaySoundValue;
-         
-        if (value.PlaySoundRef != null)
-        {
-            value.PlaySoundRef.Resume();
-        }
+
+        value.ResumeSounds();
         
         _translationUi.SetActive(value.ShowTranslationUi);
 
@@ -72,9 +69,11 @@ public class ImageTargetManager : MonoBehaviour
 
         UiTransformControllerRef.Reset();
         UiAnimationControllerRef.Reset();
+
+        _lasTrackableEventHandler = value;
     }
 
-    public void TrackingLost(PlaySound playSoundRef)
+    private void TrackingLost(CustomTrackableEventHandler value)
     {
         UiTransformControllerRef.TargetTransform = null;
         UiAnimationControllerRef.AnimatorsParent = null;
@@ -93,10 +92,9 @@ public class ImageTargetManager : MonoBehaviour
             MusicSource.Play();
         }
 
-        if (playSoundRef != null)
-        {
-            playSoundRef.Pause();
-        }
+        value.PauseSounds();
+
+        _lasTrackableEventHandler = null;
     }
 
     public void PlayRequiredLanguage(int index)

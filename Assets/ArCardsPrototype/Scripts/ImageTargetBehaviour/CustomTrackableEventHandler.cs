@@ -10,7 +10,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
     
     public Transform MainControllerTransform;
     public GameObject TargetAnimatorsParent;
-    public PlaySound PlaySoundRef;
+    private PlaySound[] _playSoundRefs;
     public LanguageDepencePlaySound LanguageDepencePlaySoundValue;
     public AudioClip MusicAudioClip;
     
@@ -19,7 +19,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
     public Action<CustomTrackableEventHandler> OnTrackingFound;
 
     public Action OnTrackingLostSimple;
-    public Action<PlaySound> OnTrackingLost;
+    public Action<CustomTrackableEventHandler> OnTrackingLost;
     
     [Space(10)]
     public bool ShowTranslationUi;
@@ -42,7 +42,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
     private void Start()
     {
         _trackableBehaviour = GetComponent<TrackableBehaviour>();
-
+        _playSoundRefs = GetComponentsInChildren<PlaySound>();
         if (_trackableBehaviour)
         {
             _trackableBehaviour.RegisterTrackableEventHandler(this);
@@ -112,7 +112,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
             MainControllerTransform = go.transform.parent;
             TargetAnimatorsParent   = go.transform.parent.gameObject;
-            PlaySoundRef = go.GetComponentInChildren<PlaySound>();
+            _playSoundRefs = go.GetComponentsInChildren<PlaySound>();
         }
 
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
@@ -151,7 +151,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         }
 
         _isTrackingFound = true;
-        //Debug.Log("Trackable " + _trackableBehaviour.TrackableName + " found");
+        Debug.Log("Trackable " + _trackableBehaviour.TrackableName + " found");
     }
 
 
@@ -180,7 +180,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
         if (OnTrackingLost != null)
         {
-            OnTrackingLost(PlaySoundRef);
+            OnTrackingLost(this);
         }
 
         _isTrackingFound = false;
@@ -192,6 +192,32 @@ public class CustomTrackableEventHandler : MonoBehaviour,
             animator.speed = 0.0f;
         }
         
-        //Debug.Log("Trackable " + _trackableBehaviour.TrackableName + " lost");
+        Debug.Log("Trackable " + _trackableBehaviour.TrackableName + " lost");
+    }
+
+    public void ResumeSounds()
+    {
+        if (_playSoundRefs == null)
+        {
+            return;
+        }
+        
+        foreach (var playSoundRef in _playSoundRefs)
+        {
+            playSoundRef.Resume();
+        }
+    }
+    
+    public void PauseSounds()
+    {
+        if (_playSoundRefs == null)
+        {
+            return;
+        }
+        
+        foreach (var playSoundRef in _playSoundRefs)
+        {
+            playSoundRef.Pause();
+        }
     }
 }

@@ -135,7 +135,146 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 1050
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: PlaySoundByDefaultLanguage
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hat_01
+        weight: 1
+      - path: Hips
+        weight: 1
+      - path: Hips/LeftUpLeg
+        weight: 1
+      - path: Hips/LeftUpLeg/LeftLeg
+        weight: 1
+      - path: Hips/LeftUpLeg/LeftLeg/LeftFoot
+        weight: 1
+      - path: Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToes
+        weight: 1
+      - path: Hips/LeftUpLeg/LeftLeg/LeftFoot/LeftToes/LeftTop
+        weight: 1
+      - path: Hips/RightUpLeg
+        weight: 1
+      - path: Hips/RightUpLeg/RightLeg
+        weight: 1
+      - path: Hips/RightUpLeg/RightLeg/RightFoot
+        weight: 1
+      - path: Hips/RightUpLeg/RightLeg/RightFoot/RightToes
+        weight: 1
+      - path: Hips/RightUpLeg/RightLeg/RightFoot/RightToes/RightTop
+        weight: 1
+      - path: Hips/Santa_01
+        weight: 1
+      - path: povorot taliaya
+        weight: 1
+      - path: povorot taliaya/Spine
+        weight: 1
+      - path: povorot taliaya/Spine/Belly
+        weight: 1
+      - path: povorot taliaya/Spine/Belly/Belly_Top
+        weight: 1
+      - path: povorot taliaya/Spine/Chest
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandAdj
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1/LeftHandMiddle2
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1/LeftHandThumb2
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/LeftShoulder/LeftArm/LeftForeArm/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck/Head
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck/Head/HeadTop
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02/Hat_03
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02/Hat_03/Hat_04
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02/Hat_03/Hat_04/Hat_05
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck/Head/HeadTop/Hat_01_2/Hat_02/Hat_03/Hat_04/Hat_05/Hat_06
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/Neck/Head/HeadTop/HeadAdj
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandAdj
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1/RightHandMiddle2
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandMiddle1/RightHandMiddle2/RightHandMiddle13
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1/RightHandThumb2
+        weight: 1
+      - path: povorot taliaya/Spine/Chest/RightShoulder/RightArm/RightForeArm/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3
+        weight: 1
+      - path: povorot taliaya/Spine/SpineAdj
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

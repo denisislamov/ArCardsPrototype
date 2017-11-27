@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using Vuforia;
 
@@ -35,10 +36,10 @@ public class MainUiController : MonoBehaviour
         }
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return new WaitForSeconds(0.1f);
         VuforiaBehaviour.Instance.RegisterVuforiaStartedCallback(LoadDataSet);
-      
     }
 
     private static void LoadDataSet()

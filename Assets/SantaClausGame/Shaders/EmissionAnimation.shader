@@ -4,6 +4,7 @@
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_Emission ("Emission (RGB)", Color) = (1,1,1,1)
 		_EmissionTex ("Albedo (RGB)", 2D) = "white" {}
+		_EmissionUvXMin("EmissionUvXMin", Float) = 1
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -17,7 +18,8 @@
 		sampler2D _EmissionTex;
 		
         fixed4 _Emission;
-       
+        float _EmissionUvXMin;
+        
 		struct Input {
 			float2 uv_MainTex;
 			float2 uv_EmissionTex;
@@ -30,7 +32,7 @@
 			fixed4 e = tex2D (_EmissionTex, IN.uv_EmissionTex);
 			o.Albedo = c.rgb;
 			
-			if (IN.uv_EmissionTex.x > _SinTime.y)
+			if (IN.uv_EmissionTex.x < _EmissionUvXMin)
 			{
 			    o.Emission = _Emission * e;
 			}

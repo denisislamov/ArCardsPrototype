@@ -89,6 +89,9 @@ Material:
         name: _DstBlend
       second: 0
     - first:
+        name: _EmissionUvXMin
+      second: 0
+    - first:
         name: _GlossMapScale
       second: 1
     - first:
